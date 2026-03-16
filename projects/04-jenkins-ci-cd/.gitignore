@@ -1,0 +1,8 @@
+.env
+*.pem
+*.key
+*.crt
+**/.docker/config.json
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+    
+    environment {
+	IMAGE_NAME = "a.raheeman7/dockerhub-pipeline-app"
+	IMAGE_TAG = "${BUILD_NUMBER}"
+    }
+
+    stages {
+	stage('Clean Workspace') {
+	    steps {
+		deleteDir()
+	    }
+	}
+	
+	stage('Checkout') {
+	    steps {
+		checkout scm
+	    }
+	}
+	
+	stage('Build Docker Image') {
+	    steps {
+		dir('projects/05-dockerhub-pipeline/app') {
+		    sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
+		    sh 'docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${IMAGE_NAME}:latest'
+		}
+	    }
+	}
+
+	stage('DockerHub Login') {
+	    steps {
+		withCredentials([usernamePassword(
+		    credentialsId: 'dockerhub-creds',
+		    usernameVariable: 'DOCKERHUB_USERNAME',
+		    passwordVariable: 'DOCKERHUB_PASSWORD'
+		)]) {
+		    sh 'echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin'
+		}
+	    }
+	}
+
+	stage('Push Image') {
+	    steps {
+		sh 'docker push ${IMAGE_NAME}:${IMAGE_TAG}'
+		sh 'docker push ${IMAGE_NAME}:latest'
+	    }
+	}
+    }
+
+    post {
+	always {
+	    sh 'docker logout || true'
+	}
+	success {
+	    echo 'DockerHub pipeline completed successfully.'
+	}
+	failure {
+	    echo 'Pipeline failed. Check logs for details.'
+	}
+    }
+}

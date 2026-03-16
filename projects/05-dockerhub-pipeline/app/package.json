@@ -1,0 +1,9 @@
+{
+  "name": "dockerhub-pipeline-app",
+  "version": "1.0.0",
+  "description": "Simple Node.js app for DockerHub pipeline project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
