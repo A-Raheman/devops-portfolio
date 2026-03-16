@@ -1,0 +1,6 @@
+services:
+ web:
+  build: .
+  container_name: mini-web
+  ports:
+  - "8090:80"
