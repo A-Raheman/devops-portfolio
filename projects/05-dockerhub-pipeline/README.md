@@ -171,4 +171,20 @@ To avoid exposing sensitive data and maintain secure CI/CD pipelines.
 
 ---
 
+## Screenshots
 
+### Jenkins Pipeline Success
+
+![Jenkins Pipeline](screenshots/jenkins-pipeline-success.png)
+
+### DockerHub Repository
+
+![DockerHub Repo](screenshots/dockerhub-repository-tags.png)
+
+### Jenkins Push Log
+
+![Docker Push Log](screenshots/jenkins-docker-push-log.png)
+
+### Container Running Test
+
+![Container Test](screenshots/container-running-test.png)
