@@ -144,3 +144,22 @@ Even if the container is running, the application will not be reachable publicly
 ## 4. How do you verify whether the issue is in Docker or in AWS networking?
 First test locally on EC2 using `curl localhost:8081`. If that works, the issue is likely the security group or firewall. If it fails, the issue is likely container-related.
 
+---
+
+## Screenshots
+
+### EC2 Instance
+
+![EC2 Instance](screenshots/ec2-instance.png)
+
+### Security Group Rules
+
+![Security Group](screenshots/security-group.png)
+
+### Docker Container Running + Curl Test on EC2
+
+![Docker PS + Curl Test](screenshots/docker-ps+curl-test.png)
+
+### Browser Access
+
+![Browser Access](screenshots/browser-access.png)
