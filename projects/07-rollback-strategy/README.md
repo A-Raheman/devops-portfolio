@@ -147,3 +147,26 @@ Redeploy the last stable image tag and replace the faulty container.
 5. How do you verify rollback actually worked?
 By checking container state and testing the application response, which should match the expected stable version.
 
+---
+
+## Screenshots
+
+### DockerHub Tags (v1 and v2)
+
+![DockerHub Tags](screenshots/dockerhub-tags-v1-v2.png)
+
+### Deploy Version v1
+
+![Deploy v1](screenshots/deploy-v1-success.png)
+
+### Deploy Version v2
+
+![Deploy v2](screenshots/deploy-v2-success.png)
+
+### Rollback to v1
+
+![Rollback](screenshots/rollback-success.png)
+
+### Browser Verification After Rollback
+
+![Browser](screenshots/browser-after-rollback.png)
