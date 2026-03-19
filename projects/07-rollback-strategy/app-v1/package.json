@@ -1,0 +1,9 @@
+{
+  "name": "rollback-app-v1",
+  "version": "1.0.0",
+  "description": "Version 1 of rollback demo app",
+  "main": "server.js",
+  "scripts": {
+     "start": "node server.js"
+  }
+}
