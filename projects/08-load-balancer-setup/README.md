@@ -204,6 +204,8 @@ NGINX will continue routing traffic to the remaining healthy containers (if conf
 
 ## Screenshots
 
+### Load Balancer Working (NGINX + Multiple Containers)
 
+![Load Balancer](screenshots/load-balancer-overview.png)
 
 
