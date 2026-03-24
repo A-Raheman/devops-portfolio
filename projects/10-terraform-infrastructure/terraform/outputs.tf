@@ -10,11 +10,11 @@ output "public_ip" {
 
 output "public_dns" {
   description = "Public DNS of the EC2 instance"
-  value	      = aws_instance.web_server.public_dns
+  value       = aws_instance.web_server.public_dns
 }
 
-output "ssh command" {
+output "ssh_command" {
   description = "SSH command to connect to the instance"
-  value	      = "ssh -i /path/to/your-key.pem ubuntu@${aws_instance.web_server.public_ip}"
+  value       = "ssh -i /path/to/your-key.pem ubuntu@${aws_instance.web_server.public_ip}"
 }
 
