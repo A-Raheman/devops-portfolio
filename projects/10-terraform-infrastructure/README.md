@@ -14,21 +14,20 @@ Provision AWS infrastructure using Terraform instead of creating resources manua
 
 ---
 
-## Project Structure 
+## Project Structure
 
 ```text
-10-terraform-infrastruture/
-|-README.md
-|-screenshots
-|_terraform/
-  |-.gitignore
-  |-main.tf
-  |-outputs.tf
-  |-provider.tf
-  |-terraform.tfvars
-  |-variables.tf
+10-terraform-infrastructure/
+├── README.md
+├── screenshots/
+└── terraform/
+    ├── .gitignore
+    ├── main.tf
+    ├── outputs.tf
+    ├── provider.tf
+    ├── terraform.tfvars
+    └── variables.tf
 ```
-
 What This Project Creates
 - 1 AWS Security Group
 - 1 AWS EC2 instance
@@ -98,6 +97,16 @@ terraform destroy
 
 ---
 
+## Verification
+
+After `terraform apply`, Terraform successfully created:
+- 1 EC2 instance
+- 1 security group
+- output values for instance ID, public IP, public DNS, and SSH command
+
+After testing, `terraform destroy` successfully removed the provisioned resources to avoid unnecessary AWS charges.
+
+---
 ## Learning Outcome
 This project demonstrates:
 - Infrastruture as Code
