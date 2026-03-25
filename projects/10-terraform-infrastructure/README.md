@@ -107,12 +107,15 @@ After `terraform apply`, Terraform successfully created:
 After testing, `terraform destroy` successfully removed the provisioned resources to avoid unnecessary AWS charges.
 
 ---
+
 ## Learning Outcome
 This project demonstrates:
-- Infrastruture as Code
-- AWS resource provisioning with Terraform
-- resuable variable-driven infrastructure
-- safe planning and destruction workflow
+
+- Infrastructure as Code (IaC)
+- AWS resource provisioning using Terraform
+- Reusable, variable-driven infrastructure design
+- Safe planning and controlled infrastructure changes
+- Clean resource lifecycle management using apply and destroy
 
 ---
 
