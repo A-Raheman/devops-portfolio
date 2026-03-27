@@ -157,4 +157,25 @@ By increasing the replica count in the Deployment or  by using the `kubectl scal
 ### 5. What does self-healing mean in Kubernetes?
 If a Pod fails or in deleted, Kubernetes automatically creates a replacement to maintain the desired state.
 
+---
+
+## Screenshots
+
+### Kubernetes Overview (Pods, Service, Port Forward)
+
+![Kubernetes Overview](screenshots/kubernetes-overview.png)
+
+### Application Response
+
+![App Response](screenshots/curl-app-response.png)
+
+### Scaled to 5 Pods
+
+![Scaled Pods](screenshots/scaled-to-5-pods.png)
+
+### Pod Recreated After Deletion
+
+![Pod Recreated](screenshots/pod-recreated.png)
+
+---
 
