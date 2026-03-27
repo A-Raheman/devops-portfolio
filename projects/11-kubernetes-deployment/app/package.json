@@ -1,0 +1,9 @@
+{
+  "name": "kubernetes-app",
+  "version": "1.0.0",
+  "description": "Simple Node.js app for Kubernetes deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
