@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-cicd-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-cicd-app
+  template:
+    metadata:
+      labels:
+        app: k8s-cicd-app
+    spec:
+      containers:
+        - name: k8s-cicd-app
+          image: k8s-cicd-app:v1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

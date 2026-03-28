@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    stages {
+	stage('Clean Workspace') {
+	    steps {
+		deleteDir()
+	    }
+	}
+	
+	stage('Checkout') {
+	    steps {
+		checkout scm
+	    }
+	}
+
+	stage('Build Image in Minikube Docker') {
+	    steps {
+		sh '''
+		    eval $(minikube -p minikube docker-env)
+		    cd projects/12-kubernetes-cicd/app
+		'''
+
+	    }
+	}
+
+	stage('Deploy to Kubernetes') {
+	    steps {
+		sh '''
+		    cd projects/12-kubernetes-cicd/k8s
+		    kubectl apply -f deployment.yaml
+		    kubectl apply -f service.yaml
+		'''
+	    }
+	}
+	
+	stage('Verify Deployment') {
+	    steps {
+		sh '''
+		    kubectl get pods
+		    kubectl get svc
+		    kubectl rollout status deployment/k8s-cicd-app-deployment
+
+		'''
+	    }
+	}
+    }
+
+    post {
+	success {
+	    echo 'Kubernetes CI/CD pipeline completed successfully.'
+	}
+	failure {
+	    echo 'Pipeline failed. Check logs for debugging.'
+	}
+    }
+}
