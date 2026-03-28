@@ -14,11 +14,11 @@ pipeline {
 	    }
 	}
 
-	stage('Build Image in Minikube Docker') {
+	stage('Build Image') {
 	    steps {
 		sh '''
-		    eval $(minikube -p minikube docker-env)
 		    cd projects/12-kubernetes-cicd/app
+		    docker build -t k8s-cicd-app:v1 .
 		'''
 
 	    }
@@ -34,13 +34,21 @@ pipeline {
 	    }
 	}
 	
+	stage('Restart Deployment') {
+	    steps {
+		sh '''
+		    kubectl rollout restart deployment/k8s-cicd-app-deployment
+		    kubectl rollout status deployment/k8s-cicd-app-deployment
+
+		'''
+	    }
+	}
+	
 	stage('Verify Deployment') {
 	    steps {
 		sh '''
 		    kubectl get pods
 		    kubectl get svc
-		    kubectl rollout status deployment/k8s-cicd-app-deployment
-
 		'''
 	    }
 	}
