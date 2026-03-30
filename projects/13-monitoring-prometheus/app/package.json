@@ -1,0 +1,13 @@
+{
+  "name": "monitoring-app",
+  "version": "1.0.0",
+  "description": "Node.js app with Prometheus metrics",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "prom-client": "^15.1.3"
+  }
+}
+
