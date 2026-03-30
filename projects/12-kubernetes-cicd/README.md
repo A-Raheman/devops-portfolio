@@ -49,7 +49,8 @@ Build an automated CI/CD pipeline using Jenkins to deploy a containerized applic
 ## Application Overview
 
 A simple Node.js application that returns:
-```Kubernetes CI/CD App is running | served-by=<pod-name>
+```
+Kubernetes CI/CD App is running | served-by=<pod-name>
 ```
 This helps verify:
 - which pod handled the request
