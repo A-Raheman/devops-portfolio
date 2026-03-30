@@ -20,7 +20,7 @@ Build an automated CI/CD pipeline using Jenkins to deploy a containerized applic
 
 ## Project Structure
 
-```text
+```
 12-kubernetes-cicd/
 ├── README.md
 ├── app/
@@ -36,7 +36,7 @@ Build an automated CI/CD pipeline using Jenkins to deploy a containerized applic
 │   ├── start.sh
 │   └── cleanup.sh
 └── screenshots/
-
+```
 ---
 
 ## CI/CD Pipeline FLow
