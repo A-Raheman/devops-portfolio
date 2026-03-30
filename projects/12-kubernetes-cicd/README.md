@@ -41,7 +41,8 @@ Build an automated CI/CD pipeline using Jenkins to deploy a containerized applic
 
 ## CI/CD Pipeline FLow
 
-```GitHub -> Jenkins -> Docker Build -> Kubernetes Deployment -> Service -> Application Access
+```
+GitHub -> Jenkins -> Docker Build -> Kubernetes Deployment -> Service -> Application Access
 ```
 
 ---
