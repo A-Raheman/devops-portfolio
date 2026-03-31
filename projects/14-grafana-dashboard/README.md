@@ -165,6 +165,35 @@ for i in {1..20}; do curl -s http://localhost:8085 > /dev/null; done
 
 ## Screenshots
 
+### Grafana Overview (Pod + Service)
+
+![Grafana Overview](screenshots/grafana-overview.png)
+
+---
+
+### Grafana Login
+
+![Grafana Login](screenshots/grafana-login.png)
+
+---
+
+### Data Source Connection Success
+
+![Data Source Connection](screenshots/grafana-datasource-success.png)
+
+---
+
+### Dashboard Visualization
+
+![Grafana Dashboard](screenshots/grafana-dashboard.png)
+
+---
+
+### Upgraded Dashboard (Multiple Panels)
+
+![Upgraded Dashboard](screenshots/grafana-upgraded-dashboard.png)
+
+
 ---
 
 ## Learning Outcome
