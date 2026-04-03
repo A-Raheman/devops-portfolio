@@ -1,0 +1,88 @@
+pipeline {
+    agent any
+   
+    environment {
+	IMAGE_NAME = "araheman/devops-production-app"
+	IMAGE_TAG = "build-${BUILD_NUMBER}"
+	KUBECONFIG = "/var/lib/jenkins/.kube/config"
+    }
+
+    stages {
+	stage('Clean Workspace') {
+	    steps {
+		deleteDir()
+	    }
+	}
+
+	stage('Checkout') {
+	    steps {
+		checkout scm
+	    }
+	}
+
+	stage('Build Docker Image') {
+	    steps {
+		sh '''
+		    cd projects/16-k8s-cicd-production/app
+		    docker build --build-arg APP_VERSION=${IMAGE_TAG} -t ${IMAGE_NAME}:${IMAGE_TAG} -t ${IMAGE_NAME}:latest .
+		'''
+	    }
+	}
+
+	stage('DockerHub Login') {
+	    steps {
+		withCredentials([usernamePassword(
+		    credentialsId: 'dockerhub-creds',
+		    usernameVariable: 'DOCKERHUB_USERNAME',
+		    passwordVariable: 'DOCKERHUB_PASSWORD'
+		)]) {
+		    sh 'echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin'
+		}
+	    }
+	}
+
+	stage('Push Image') {
+	    steps {
+		sh '''
+		    docker push ${IMAGE_NAME}:${IMAGE_NAME}
+		    docker push ${IMAGE_NAME}:latest
+		'''
+	    }
+	}
+	
+	stage('Update Kubernetes Deployment') {
+	    steps {
+		sh '''
+		    kubectl set image deployment/prod-app-deployment prod-app=${IMAGE_NAME}:${IMAGE_TAG}
+		    kubectl rollout status deployment/prod-app-deployment
+		'''
+	    }
+	}
+	
+	stage('Verify Deployment') {
+	    steps {
+		sh '''
+		    kubectl get pods
+		    kubectl get svc
+		'''
+	    }
+	}
+    }
+    
+    post {
+	always {
+	    sh 'docker logout || true'
+	}
+	success {
+	    echo 'Production CI/CD pipeline completed successfully.'
+	}
+	failure {
+	    echo 'Pipeline failed. Check logs for debugging.'
+	}
+    }
+}
+
+
+
+
+

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: prod-app
+  template:
+    metadata:
+      labels:
+        app: prod-app
+    spec:
+      containers:
+        - name: prod-app
+          image: araheman/devops-production-app:v1
+          ports:
+            - containerPort: 8080
