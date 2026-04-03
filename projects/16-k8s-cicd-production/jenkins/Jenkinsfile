@@ -31,11 +31,13 @@ pipeline {
 	stage('Build Docker Image') {
 	    steps {
 		sh '''
+		    echo "IMAGE_NAME=${IMAGE_NAME}"
+		    echo "IMAGE_TAG=${IMAGE_TAG}"
 		    cd projects/16-k8s-cicd-production/app
 		    docker build \
 		      --build-arg APP_VERSION=${IMAGE_TAG} \
-		      -t ${IMAGE_NAME}:${IMAGE_TAG} \
-		      -t ${IMAGE_NAME}:latest .
+		      -t "${IMAGE_NAME}:${IMAGE_TAG}" \
+		      -t "${IMAGE_NAME}:latest" .
 		'''
 	    }
 	}
@@ -55,8 +57,12 @@ pipeline {
 	stage('Push Image') {
 	    steps {
 		sh '''
-		    docker push ${IMAGE_NAME}:${IMAGE_NAME}
-		    docker push ${IMAGE_NAME}:latest
+		    echo "IMAGE_NAME=${IMAGE_NAME}"
+		    echo "IMAGE_TAG=${IMAGE_TAG}"
+		    echo "Pushing versioned image..."
+		    docker push "${IMAGE_NAME}:${IMAGE_NAME}"
+		    echo "Pushing latest image..."
+		    docker push "${IMAGE_NAME}:latest"
 		'''
 	    }
 	}
