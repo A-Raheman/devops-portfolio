@@ -2,9 +2,8 @@ pipeline {
     agent any
    
     environment {
-	IMAGE_NAME = "araheman/devops-production-app"
-	IMAGE_TAG = "build-${BUILD_NUMBER}"
-	KUBECONFIG = "/var/lib/jenkins/.kube/config"
+	IMAGE_NAME = 'araheman/devops-production-app'
+	KUBECONFIG = '/var/lib/jenkins/.kube/config'
     }
 
     stages {
@@ -20,11 +19,23 @@ pipeline {
 	    }
 	}
 
+	stage('Set Image Tag') {
+	    steps {
+		script {
+		    env.IMAGE_TAG = "build-${env.BUILD_NUMBER}"
+		    echo "Using image: ${env.IMAGE_NAME}:${env.IMAGE_TAG}"
+		}
+	    }
+	}
+
 	stage('Build Docker Image') {
 	    steps {
 		sh '''
 		    cd projects/16-k8s-cicd-production/app
-		    docker build --build-arg APP_VERSION=${IMAGE_TAG} -t ${IMAGE_NAME}:${IMAGE_TAG} -t ${IMAGE_NAME}:latest .
+		    docker build \
+		      --build-arg APP_VERSION=${IMAGE_TAG} \
+		      -t ${IMAGE_NAME}:${IMAGE_TAG} \
+		      -t ${IMAGE_NAME}:latest .
 		'''
 	    }
 	}
