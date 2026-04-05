@@ -1,8 +1,28 @@
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
 crash.log
 .terraform.lock.hcl
+
+# Sensitive files
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+
+# Keys & credentials
+*.pem
+*.key
+*.env
+.env.*
+
+# AWS local config
 aws/
+.aws/
+
+# Binaries / installers
 awscliv2.zip
 
+# OS files
+.DS_Store
+Thumbs.db
