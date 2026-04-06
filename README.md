@@ -152,6 +152,15 @@ devops-portfolio/
 
 ---
 
+## 🧩 What I Can Do
+
+- Design CI/CD pipelines from scratch
+- Deploy and manage applications in Kubernetes
+- Implement monitoring and logging systems
+- Debug production issues efficiently
+- Automate infrastructure using Terraform
+
+---
 ## 📌 Key Strengths
 - Hands-on production-like projects
 - Real debugging experience
