@@ -14,6 +14,16 @@ This portfolio showcases hands-on projects covering:
 
 ---
 
+## 🚀 What I Built
+
+- Production-grade CI/CD pipeline (Jenkins → Kubernetes)
+- Kubernetes-based microservice deployment
+- Full observability stack (Prometheus + Grafana + Loki)
+- Infrastructure as Code using Terraform
+- Real-world debugging and incident handling
+
+---
+
 ## 🧠 Tech Stack
 
 ### Core
@@ -43,7 +53,7 @@ This portfolio showcases hands-on projects covering:
 
 ---
 
-## 🏆 Featured Projects
+## 🏆 Flagship Projects
 
 ### 🔥 Production CI/CD Pipeline (Project 16)
 **Jenkins → DockerHub → Kubernetes → Automated Deployment**
