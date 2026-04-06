@@ -1,83 +1,172 @@
-# DevOps Portfolio - Abdul Raheman
+# 🚀 DevOps Portfolio — Abdul Raheman
 
-This repository documents my hands-on DevOps learning journey and production-style projects.
+## 👨‍💻 About Me
 
-My goal is to build real-world Devops systems including CI/CD pipelines, containerized deployments, infrastructure automation, and cloud architecture
+I am a DevOps & Cloud Engineer focused on building real-world, production-grade systems using modern DevOps tools and practices.
 
----
+This portfolio showcases hands-on projects covering:
 
-# Tech Stack
-
-1. Linux
-2. Git
-3. Docker
-4. Jenkins
-5. AWS EC2
-6. DockerHub
-7. NGINX
-8. Terraform
-9. Bash
+- CI/CD pipelines  
+- Containerization & orchestration  
+- Infrastructure as Code  
+- Monitoring & observability  
+- Production debugging  
 
 ---
 
-# Completed projects
+## 🧠 Tech Stack
+
+### Core
+- Linux  
+- Git (Advanced workflows)  
+- Bash  
+
+### CI/CD & Automation
+- Jenkins  
+- Webhooks  
+- Pipeline Automation  
+
+### Containers & Orchestration
+- Docker  
+- Docker Compose  
+- Kubernetes (Minikube)  
+
+### Cloud & Infrastructure
+- AWS EC2  
+- Terraform  
+
+### Monitoring & Observability
+- Prometheus  
+- Grafana  
+- Loki  
+- Grafana Alloy  
+
+---
+
+## 🏆 Featured Projects (High Impact)
+
+### 🔥 Production CI/CD Pipeline (Project 16)
+**Jenkins → DockerHub → Kubernetes → Automated Deployment**
+
+- Fully automated CI/CD pipeline  
+- Docker image versioning (`build-<number>`)  
+- Kubernetes rolling updates  
+- Zero-downtime deployments  
+- Real-time version verification  
+
+👉 `projects/16-k8s-cicd-production`
+
+---
+
+### 📊 Observability Stack (Projects 13–15)
+
+**Monitoring + Logging + Visualization**
+
+- Prometheus → Metrics collection  
+- Grafana → Dashboards & visualization  
+- Loki + Alloy → Centralized logging  
+- LogQL & PromQL queries  
+
+👉 `projects/13-monitoring-prometheus`  
+👉 `projects/14-grafana-dashboard`  
+👉 `projects/15-logging-loki`
+
+---
+
+### ⚙️ Infrastructure as Code (Project 10)
+
+- Terraform-based EC2 provisioning  
+- Security group configuration  
+- Variable-driven infrastructure  
+- Plan → Apply → Destroy workflow  
+
+👉 `projects/10-terraform-infrastructure`
+
+---
+
+## 📦 Complete Project List
 
 | Project | Description |
-|-------|--------|
-| Linux Basics | Shell scripting, process management, file systems |
-| Git Workflow | Branching, rebasing , conflict resolution |
-| Dockerized Application | Containerized Node app |
-| Jenkins CI/CD | Automated build and deployment piepline |
-| DockerHub Pipeline | Image push and version management |
-| EC2 Deployment | Production deployment on AWS |
-| Rollback Strategy | Blue-green rollback simulation |
-| Load Balancer Setup | Multi-container traffic distribution |
-| Incident Debugging | Real pipeline failure debugging |
+|--------|------------|
+| 01 | Linux & Shell Automation |
+| 02 | Git Advanced Workflows |
+| 03 | Dockerized Application |
+| 04 | Jenkins CI/CD |
+| 05 | DockerHub Pipeline |
+| 06 | EC2 Deployment |
+| 07 | Rollback Strategy |
+| 08 | Load Balancer (NGINX) |
+| 09 | Incident Debugging |
+| 10 | Terraform Infrastructure |
+| 11 | Kubernetes Deployment |
+| 12 | Kubernetes CI/CD |
+| 13 | Monitoring (Prometheus) |
+| 14 | Visualization (Grafana) |
+| 15 | Logging (Loki + Alloy) |
+| 16 | Production CI/CD Pipeline |
 
 ---
 
-# Current Learning
+## 🧩 Architecture Overview
 
-Day 22 - Terraform Infrastructure as Code
-
-Goal:
-Provision infrastructure using Terraform instead of manual AWS setup.
+```text
+Code → Jenkins → Docker → DockerHub → Kubernetes
+                                   ↓
+                          Monitoring (Prometheus)
+                                   ↓
+                          Visualization (Grafana)
+                                   ↓
+                          Logging (Loki + Alloy)
+```
 
 ---
 
-# Repository Structure
+## 📁 Repository Structure
 
 devops-portfolio/
-projects/
-01-linux-basics/
-02-git-workflow/
-03-dockerized-app/
-04-jenkins-ci-cd/
-05-dockerhub-pipeline/
-06-ec2-deployment/
-07-rollback-strategy/
-08-load-balancer-setup/
-09-incident-debugging/
-10-terraform-infrastructure/
+├── docs/
+├── projects/
+├── scripts/
+├── templates/
+└── README.md
 
 ---
 
-# Learning Philosophy
-
-Focus on **hands-on DevOps enginnering**, not just theory.
-
-Every project demonstrates:
-
-- Real infrastructure
-- Debugging scenarios
-- CI/CD automation
-- Production practices
+## 🎯 What This Portfolio Demonstrates
+- End-to-end CI/CD pipeline design
+- Containerized application deployment
+- Kubernetes orchestration & scaling
+- Infrastructure provisioning using Terraform
+- Monitoring and logging implementation
+- Debugging real-world DevOps issues
 
 ---
 
-# Author
+## 📌 Key Strengths
+- Hands-on production-like projects
+- Real debugging experience
+- Clean project structure with screenshots
+- Interview-ready documentation
 
-Abdul Raheman
-AWS Cloud / DevOps Engineer
+---
+
+
+## 🚀 Goal
+
+To secure a role as a DevOps Engineer / Cloud Engineer / SRE and contribute to building scalable, reliable, and automated systems.
+
+---
+
+## ⭐ Final Note
+
+This is not a tutorial-based portfolio.
+
+Every project here is:
+
+- Built from scratch
+- Debugged manually
+- Documented for real-world understanding
+
+---
 
 
