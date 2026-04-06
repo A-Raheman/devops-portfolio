@@ -43,7 +43,7 @@ This portfolio showcases hands-on projects covering:
 
 ---
 
-## 🏆 Featured Projects (High Impact)
+## 🏆 Featured Projects
 
 ### 🔥 Production CI/CD Pipeline (Project 16)
 **Jenkins → DockerHub → Kubernetes → Automated Deployment**
@@ -122,14 +122,14 @@ Code → Jenkins → Docker → DockerHub → Kubernetes
 ---
 
 ## 📁 Repository Structure
-
+```
 devops-portfolio/
 ├── docs/
 ├── projects/
 ├── scripts/
 ├── templates/
 └── README.md
-
+```
 ---
 
 ## 🎯 What This Portfolio Demonstrates
