@@ -50,7 +50,7 @@ Prometheus:
 Grafana:
 
 - Queries Prometheus
-- Displays data as dashboard
+- Displays data as dashboards
 
 ---
 

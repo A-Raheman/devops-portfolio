@@ -45,7 +45,7 @@ Kubernetes Pods -> Grafana Alloy -> Loki -> Grafana Explore
 
 ## Overview
 This project implements a centralized logging system:
-- Applications generates log
+- Applications generate logs
 - Grafana Alloy collects logs from Kubernetes pods
 - Loki stores logs as time-series data
 - Grafana allows querying and visualizing logs
@@ -56,7 +56,7 @@ This project implements a centralized logging system:
 Loki is deployed as a single binary in Kubernetes using a ConfigMap-based configuration.
 
 ### Key Features
-- Log aggregration
+- Log aggregation
 - Label-based indexing
 - Efficient log querying
 

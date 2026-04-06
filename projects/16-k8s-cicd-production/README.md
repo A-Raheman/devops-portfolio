@@ -47,7 +47,7 @@ GitHub -> Jenkins -> Docker Build -> DockerHub -> Kubernetes -> Live App Update
 
 ## Overview
 
-This project implements a production-like CI/CD pipeline:
+This project implements a production-grade CI/CD pipeline that automates build, push, and deployment workflows:
 - Code is pushed to GitHub
 - Jenkins automatically builds the application
 - Docker image is created and versioned
@@ -221,16 +221,16 @@ Separated `IMAGE_NAME` and `IMAGE_TAG` correctly in Jenkins pipeline.
 Repository clone failed with network/EOF errors.
 
 #### Fix:
-Cleaned Jenkins workspace and retired clone.
+Cleaned Jenkins workspace and retried clone.
 
 ---
 
 ### 3. Kubernetes Connection Failure
 #### Issue:
-Jenkins could not connect to Kuberentes cluster.
+Jenkins could not connect to Kubernetes cluster.
 
 #### Fix:
-Configuration correct kubeconfig path for Jenkins.
+Configured correct kubeconfig path for Jenkins.
 
 ---
 
