@@ -124,6 +124,66 @@ curl -H "Host: app.local" http://127.0.0.1:<PORT>/api
 ```
 ---
 
+## 📸 Screenshots
+
+### 🟢 Ingress Controller Setup
+![Ingress Controller Pods](screenshots/01-ingress-controller-pods-running.png)
+
+---
+
+### 🟢 Application Pods Running
+![App Pods](screenshots/02-app-pods-running.png)
+
+---
+
+### 🟢 Services Created
+![Services](screenshots/03-services-created.png)
+
+---
+
+### 🟢 Ingress Resource Created
+![Ingress](screenshots/04-ingress-resource-created.png)
+
+---
+
+### 🟢 Ingress Routing Rules
+![Ingress Routing](screenshots/05-ingress-describe-routing.png)
+
+---
+
+### 🟢 Internal Service Testing
+
+#### Frontend Service
+![Frontend Internal](screenshots/06-internal-frontend-service-test.png)
+
+#### API Service
+![API Internal](screenshots/07-internal-api-service-test.png)
+
+#### API Detailed Response
+![API Detailed](screenshots/08-api-service-detailed-response.png)
+
+---
+
+### 🟢 Ingress Controller URL
+![Ingress URL](screenshots/09-ingress-controller-url.png)
+
+---
+
+### 🟢 Final Routing via Ingress
+
+#### Frontend Route (/)
+![Frontend via Ingress](screenshots/10-frontend-access-via-ingress.png)
+
+#### API Route (/api)
+![API via Ingress](screenshots/11-api-access-via-ingress.png)
+
+---
+
+### 🔴 Debugging (502 Bad Gateway)
+![502 Error](screenshots/12-502-bad-gateway-error.png)
+
+---
+
 ## Real-World Debugging (502 Bad Gateway)
 ### Issue
 - Ingress returned **502 Bad Gateway**
