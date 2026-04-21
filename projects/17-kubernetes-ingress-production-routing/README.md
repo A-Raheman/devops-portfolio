@@ -36,7 +36,7 @@ Client Request -> Ingress Controller -> Service -> Pod
 ---
 
 ## Project Structure
-
+```text
 17-kubernetes-ingress-production-routing/
 ├── api-deployment.yaml
 ├── frontend-deployment.yaml
@@ -45,7 +45,7 @@ Client Request -> Ingress Controller -> Service -> Pod
 ├── ingress.yaml
 ├── screenshots/
 └── README.md
-
+```
 ---
 
 ## Step-by-Step Execution
@@ -251,8 +251,10 @@ A component (like NGINX) that actually implements Ingress rules.
 
 ---
 
-Author
+## Author
+
 **Abdul Raheman**
+
 DevOps | Cloud | AWS | Kubernetes
 
 ---
