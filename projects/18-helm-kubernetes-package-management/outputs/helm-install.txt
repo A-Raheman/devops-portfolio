@@ -1,0 +1,12 @@
+NAME: my-nginx-release
+LAST DEPLOYED: Wed Apr 22 05:28:37 2026
+NAMESPACE: helm-lab
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace helm-lab -l "app.kubernetes.io/name=my-nginx-app,app.kubernetes.io/instance=my-nginx-release" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace helm-lab $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+echo "Visit http://127.0.0.1:8080 to use your application"
+kubectl --namespace helm-lab port-forward $POD_NAME 8080:$CONTAINER_PORT
+

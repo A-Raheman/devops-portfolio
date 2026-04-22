@@ -1,0 +1,2 @@
+NAME                            TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+my-nginx-release-my-nginx-app   ClusterIP   10.97.61.83   <none>        80/TCP    97m

@@ -1,0 +1,11 @@
+NAME                                                 READY   STATUS    RESTARTS   AGE
+pod/my-nginx-release-my-nginx-app-7c4c5d946d-gtg6j   1/1     Running   0          11m
+
+NAME                                    TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+service/my-nginx-release-my-nginx-app   ClusterIP   10.97.61.83   <none>        80/TCP    11m
+
+NAME                                            READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/my-nginx-release-my-nginx-app   1/1     1            1           11m
+
+NAME                                                       DESIRED   CURRENT   READY   AGE
+replicaset.apps/my-nginx-release-my-nginx-app-7c4c5d946d   1         1         1       11m
