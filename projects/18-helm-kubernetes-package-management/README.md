@@ -248,18 +248,18 @@ That is why Helm is a key skill for cloud-native DevOps roles.
 1. What is Helm?
 2. What is a Helm chart?
 3. What is a Helm release?
-4. What is values.yaml used for?
+4. What is `values.yaml` used for?
 
 ### Intermediate
-5. What is the difference between helm install and helm upgrade?
+5. What is the difference between `helm install` and `helm upgrade`?
 6. Why do teams use separate values files for dev and prod?
-7. What does helm template do?
-8. What is the purpose of helm history and helm rollback?
+7. What does `helm template` do?
+8. What is the purpose of `helm history` and `helm rollback`?
 
 ### Advanced
 9.  How would you use Helm in a CI/CD pipeline?
 10. How does Helm help when deploying to AWS EKS?
-11. What is the difference between overriding values in a file and using --set?
+11. What is the difference between overriding values in a file and using `--set`?
 12. How would you debug a broken Helm deployment?
 
 ## Final Outcome
