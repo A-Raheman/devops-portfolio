@@ -1,7 +1,7 @@
 # Project 19 - Helm CI/CD Pipeline
 
 ## Overview
-This project demonstrates a **complete end-to-to CI/CD pipeline** using:
+This project demonstrates a **complete end-to-end CI/CD pipeline** using:
 - Docker (build & containerization)
 - Jenkins (automation pipeline)
 - Kubernetes (Minikube deployment)
@@ -91,10 +91,7 @@ helm list -n helm-lab
 ### 4. Access Application
 ```bash
 minikube service helm-cicd-app -n helm-lab --url
-```
-OR
-```bash
-curl http://localhost:<NodePort>
+curl <printed-url>
 ```
 ---
 
@@ -146,6 +143,15 @@ curl http://localhost:<NodePort>
 ### Final Application Output
 
 ![Final App Output](screenshots/14-final-app-access-after-cicd.png)
+
+---
+
+## Troubleshooting Highlights
+
+- Fixed Jenkins branch mismatch by changing the branch from `master` to `main`.
+- Removed duplicate checkout from Jenkinsfile to avoid SCM conflicts.
+- Fixed Kubernetes access for Jenkins by providing kubeconfig and Minikube certificates to the Jenkins user.
+- Fixed `ImagePullBackOff` by ensuring the Docker image was available and then moving toward DockerHub-based image deployment.
 
 ---
 
