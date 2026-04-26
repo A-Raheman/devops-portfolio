@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+
+    environment {
+	IMAGE_NAME = "araheman/helm-cicd-app"
+	IMAGE_TAG = "build-${BUILD_NUMBER}"
+    }
+
+    stages {
+
+	stage('Checkout') {
+	    steps {
+		git url: 'https://github.com/A-Raheman/devops-portfolio.git'
+	    }
+	}
+
+	stage('Build Docker Image') {
+	    steps {
+		sh '''
+		cd projects/19-helm-cicd/app
+		docker build -t $IMAGE_NAME:$IMAGE_TAG .
+		'''
+	    }
+	}
+
+	stage('Push to DockerHub') {
+	    steps {
+		withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+		    sh '''
+		    echo $PASS | docker login -u $USER --password-stdin
+		    docker push $IMAGE_NAME:$IMAGE_TAG
+		    '''
+		}
+	    }
+	}
+
+	stage('Deploy to Kubernetes (Helm)') {
+	    steps {
+		sh '''
+		cd projects/19-helm-cicd
+		helm upgrade helm-cicd ./helm/app \
+		-n helm-lab \
+		--set image.repository=$IMAGE_NAME \
+		--set image.tag=$IMAGE_TAG
+		'''
+	    }
+	}
+    }
+}
+
