@@ -99,6 +99,7 @@ helm upgrade helm-cicd-eks ./helm/app \
 -n default \
 --set image.repository=<ACCOUNT_ID>.dkr.ecr.ap-south-1.amazonaws.com/helm-cicd-app \
 --set image.tag=eks-v1
+```
 ---
 ### 6. Expose Application
 ```bash
@@ -240,11 +241,11 @@ eksctl delete cluster --name helm-cicd-cluster --region ap-south-1
 ---
 
 ## Key Achievement
-✅ Successfully deployed application to AWS Kubernetes
-✅ Used private container registry (ECR)
-✅ Implemented Helm-based deployment
-✅ Debugged real production issues
-✅ Managed cloud resources efficiently
+- Successfully deployed application to AWS Kubernetes
+- Used private container registry (ECR)
+- Implemented Helm-based deployment
+- Debugged real production issues
+- Managed cloud resources efficiently
 
 ---
 
