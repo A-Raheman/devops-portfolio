@@ -31,7 +31,7 @@ The pipeline includes:
 ---
 
 ## Tech Stack
-``` 
+ 
 | Tool    | Purpose                         |
 | ------- | ------------------------------- |
 | Docker  | Containerization                |
@@ -40,7 +40,7 @@ The pipeline includes:
 | Helm    | Deployment & release management |
 | kubectl | Kubernetes CLI                  |
 | eksctl  | EKS cluster provisioning        |
-```
+
 
 ---
 
