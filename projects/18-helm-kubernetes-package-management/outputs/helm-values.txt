@@ -1,0 +1,4 @@
+USER-SUPPLIED VALUES:
+replicaCount: 2
+service:
+  type: NodePort

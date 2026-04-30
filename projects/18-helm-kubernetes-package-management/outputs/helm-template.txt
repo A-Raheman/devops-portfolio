@@ -1,0 +1,100 @@
+---
+# Source: my-nginx-app/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: my-nginx-release-my-nginx-app
+  labels:
+    helm.sh/chart: my-nginx-app-0.1.0
+    app.kubernetes.io/name: my-nginx-app
+    app.kubernetes.io/instance: my-nginx-release
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+automountServiceAccountToken: true
+---
+# Source: my-nginx-app/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx-release-my-nginx-app
+  labels:
+    helm.sh/chart: my-nginx-app-0.1.0
+    app.kubernetes.io/name: my-nginx-app
+    app.kubernetes.io/instance: my-nginx-release
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: my-nginx-app
+    app.kubernetes.io/instance: my-nginx-release
+---
+# Source: my-nginx-app/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx-release-my-nginx-app
+  labels:
+    helm.sh/chart: my-nginx-app-0.1.0
+    app.kubernetes.io/name: my-nginx-app
+    app.kubernetes.io/instance: my-nginx-release
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: my-nginx-app
+      app.kubernetes.io/instance: my-nginx-release
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: my-nginx-app-0.1.0
+        app.kubernetes.io/name: my-nginx-app
+        app.kubernetes.io/instance: my-nginx-release
+        app.kubernetes.io/version: "1.16.0"
+        app.kubernetes.io/managed-by: Helm
+    spec:
+      serviceAccountName: my-nginx-release-my-nginx-app
+      containers:
+        - name: my-nginx-app
+          image: "nginx:1.16.0"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+---
+# Source: my-nginx-app/templates/tests/test-connection.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "my-nginx-release-my-nginx-app-test-connection"
+  labels:
+    helm.sh/chart: my-nginx-app-0.1.0
+    app.kubernetes.io/name: my-nginx-app
+    app.kubernetes.io/instance: my-nginx-release
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['my-nginx-release-my-nginx-app:80']
+  restartPolicy: Never
