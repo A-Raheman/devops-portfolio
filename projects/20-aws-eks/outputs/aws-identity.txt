@@ -1,0 +1,5 @@
+{
+    "UserId": "AID***********",
+    "Account": "************",
+    "Arn": "arn:aws:iam::************:user/terraform-user"
+}

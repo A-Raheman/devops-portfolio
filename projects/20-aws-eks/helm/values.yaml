@@ -1,0 +1,4 @@
+image:
+  repository: 071292884513.dkr.ecr.ap-south-1.amazonaws.com/helm-cicd-app
+  tag: eks-v1
+  pullPolicy: IfNotPresent

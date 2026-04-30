@@ -1,0 +1,16 @@
+{
+    "repository": {
+        "repositoryArn": "arn:aws:ecr:ap-south-1:************:repository/helm-cicd-app",
+        "registryId": "************",
+        "repositoryName": "helm-cicd-app",
+        "repositoryUri": "************.dkr.ecr.ap-south-1.amazonaws.com/helm-cicd-app",
+        "createdAt": "2026-04-29T06:22:11.724000+00:00",
+        "imageTagMutability": "MUTABLE",
+        "imageScanningConfiguration": {
+            "scanOnPush": false
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }
+    }
+}
