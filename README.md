@@ -1,191 +1,144 @@
-# 🚀 DevOps Portfolio — Abdul Raheman
+# 🚀 DevOps Portfolio – Abdul Raheman
 
-## 👨‍💻 About Me
+## 👋 About Me
 
-I am a DevOps & Cloud Engineer focused on building real-world, production-grade systems using modern DevOps tools and practices.
+I am a DevOps & Cloud Engineer focused on building, automating, and deploying scalable applications using modern DevOps tools and cloud platforms.
 
-This portfolio showcases hands-on projects covering:
-
-- CI/CD pipelines  
-- Containerization & orchestration  
-- Infrastructure as Code  
-- Monitoring & observability  
-- Production debugging  
+This repository represents my **hands-on journey from local development to production-grade cloud deployments**, covering CI/CD, containerization, Kubernetes, and AWS.
 
 ---
 
-## 🚀 What I Built
+## 🧠 What I Bring
 
-- Production-grade CI/CD pipeline (Jenkins → Kubernetes)
-- Kubernetes-based microservice deployment
-- Full observability stack (Prometheus + Grafana + Loki)
-- Infrastructure as Code using Terraform
-- Real-world debugging and incident handling
-
----
-
-## 🧠 Tech Stack
-
-### Core
-- Linux  
-- Git (Advanced workflows)  
-- Bash  
-
-### CI/CD & Automation
-- Jenkins  
-- Webhooks  
-- Pipeline Automation  
-
-### Containers & Orchestration
-- Docker  
-- Docker Compose  
-- Kubernetes (Minikube)  
-
-### Cloud & Infrastructure
-- AWS EC2  
-- Terraform  
-
-### Monitoring & Observability
-- Prometheus  
-- Grafana  
-- Loki  
-- Grafana Alloy  
+- End-to-end DevOps implementation (Build → Deploy → Monitor)
+- Real-world debugging experience (not just happy paths)
+- Cloud-native deployment using AWS (ECR, EKS)
+- Strong foundation in:
+  - Docker
+  - Kubernetes
+  - Helm
+  - Jenkins
+  - CI/CD pipelines
 
 ---
 
-## 🏆 Flagship Projects
+## 🏆 Featured Projects
 
-### 🔥 Production CI/CD Pipeline (Project 16)
-**Jenkins → DockerHub → Kubernetes → Automated Deployment**
+### 🔹 1. CI/CD Pipeline with Helm (Project 19)
+- Jenkins pipeline builds Docker image
+- Pushes to registry
+- Deploys to Kubernetes using Helm
 
-- Fully automated CI/CD pipeline  
-- Docker image versioning (`build-<number>`)  
-- Kubernetes rolling updates  
-- Zero-downtime deployments  
-- Real-time version verification  
-
-👉 `projects/16-k8s-cicd-production`
+👉 Demonstrates:
+- Full CI/CD automation
+- Infrastructure + deployment integration
 
 ---
 
-### 📊 Observability Stack (Projects 13–15)
+### 🔹 2. AWS EKS Deployment with ECR (Project 20)
+- Docker image pushed to Amazon ECR
+- Deployed to AWS EKS cluster
+- Exposed using LoadBalancer
 
-**Monitoring + Logging + Visualization**
-
-- Prometheus → Metrics collection  
-- Grafana → Dashboards & visualization  
-- Loki + Alloy → Centralized logging  
-- LogQL & PromQL queries  
-
-👉 `projects/13-monitoring-prometheus`  
-👉 `projects/14-grafana-dashboard`  
-👉 `projects/15-logging-loki`
+👉 Demonstrates:
+- Real cloud deployment
+- Kubernetes in production environment
+- Debugging cloud-native issues
 
 ---
 
-### ⚙️ Infrastructure as Code (Project 10)
+### 🔹 3. Kubernetes Ingress Routing (Project 17)
+- Implemented path-based routing
+- Fixed real backend/service issues
 
-- Terraform-based EC2 provisioning  
-- Security group configuration  
-- Variable-driven infrastructure  
-- Plan → Apply → Destroy workflow  
-
-👉 `projects/10-terraform-infrastructure`
-
----
-
-## 📦 Complete Project List
-
-| Project | Description |
-|--------|------------|
-| 01 | Linux & Shell Automation |
-| 02 | Git Advanced Workflows |
-| 03 | Dockerized Application |
-| 04 | Jenkins CI/CD |
-| 05 | DockerHub Pipeline |
-| 06 | EC2 Deployment |
-| 07 | Rollback Strategy |
-| 08 | Load Balancer (NGINX) |
-| 09 | Incident Debugging |
-| 10 | Terraform Infrastructure |
-| 11 | Kubernetes Deployment |
-| 12 | Kubernetes CI/CD |
-| 13 | Monitoring (Prometheus) |
-| 14 | Visualization (Grafana) |
-| 15 | Logging (Loki + Alloy) |
-| 16 | Production CI/CD Pipeline |
+👉 Demonstrates:
+- Traffic routing
+- Debugging service connectivity
 
 ---
 
-## 🧩 Architecture Overview
+### 🔹 4. Helm Kubernetes Package Management (Project 18)
+- Created reusable Helm charts
+- Managed multiple environments (dev/prod)
+
+👉 Demonstrates:
+- Kubernetes abstraction
+- Scalable deployments
+
+---
+
+### 🔹 5. CI/CD with Docker + EC2 (Project 15/16)
+- Built pipelines using Jenkins
+- Deployed apps on AWS EC2
+
+👉 Demonstrates:
+- Traditional + cloud deployment hybrid
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|--------|------|
+| Containerization | Docker |
+| CI/CD | Jenkins |
+| Cloud | AWS (ECR, EKS, EC2) |
+| Orchestration | Kubernetes |
+| Packaging | Helm |
+| Monitoring (Next Phase) | Prometheus, Grafana |
+
+---
+
+## 🧠 DevOps Mindset (What I’ve Learned)
+
+- “If it works locally, it doesn’t mean it works in cloud”
+- Services without endpoints = silent failures
+- ImagePullBackOff = registry/auth/config issue
+- Kubernetes failures are mostly:
+  - networking
+  - resource constraints
+  - misconfiguration
+
+---
+
+## 🐞 Real Problems I Solved
+
+- Fixed Kubernetes Pod Pending (node capacity issue)
+- Debugged ImagePullBackOff (wrong image source)
+- Solved LoadBalancer not responding (no endpoints)
+- Fixed Jenkins pipeline failures (branch + credential issues)
+- Resolved Docker port conflicts and container networking issues
+
+---
+
+## 📈 What’s Next
+
+- Monitoring with Prometheus & Grafana
+- GitOps with ArgoCD
+- Terraform for Infrastructure as Code
+- Advanced Kubernetes (HPA, autoscaling)
+
+---
+
+## 📂 Repository Structure
 
 ```text
-Code → Jenkins → Docker → DockerHub → Kubernetes
-                                   ↓
-                          Monitoring (Prometheus)
-                                   ↓
-                          Visualization (Grafana)
-                                   ↓
-                          Logging (Loki + Alloy)
+projects/
+  ├── 01-... → Fundamentals
+  ├── 10-... → Docker & CI/CD
+  ├── 15-... → AWS + Deployment
+  ├── 17-... → Kubernetes Networking
+  ├── 18-... → Helm
+  ├── 19-... → CI/CD + Helm
+  └── 20-... → AWS EKS Deployment
 ```
 
 ---
 
-## 📁 Repository Structure
-```
-devops-portfolio/
-├── docs/
-├── projects/
-├── scripts/
-├── templates/
-└── README.md
-```
----
+## 👨‍ Author
 
-## 🎯 What This Portfolio Demonstrates
-- End-to-end CI/CD pipeline design
-- Containerized application deployment
-- Kubernetes orchestration & scaling
-- Infrastructure provisioning using Terraform
-- Monitoring and logging implementation
-- Debugging real-world DevOps issues
+**Abdul Raheman**
+
+DevOps Engineer | AWS Cloud Engineer
 
 ---
-
-## 🧩 What I Can Do
-
-- Design CI/CD pipelines from scratch
-- Deploy and manage applications in Kubernetes
-- Implement monitoring and logging systems
-- Debug production issues efficiently
-- Automate infrastructure using Terraform
-
----
-## 📌 Key Strengths
-- Hands-on production-like projects
-- Real debugging experience
-- Clean project structure with screenshots
-- Interview-ready documentation
-
----
-
-
-## 🚀 Goal
-
-To secure a role as a DevOps Engineer / Cloud Engineer / SRE and contribute to building scalable, reliable, and automated systems.
-
----
-
-## ⭐ Final Note
-
-This is not a tutorial-based portfolio.
-
-Every project here is:
-
-- Built from scratch
-- Debugged manually
-- Documented for real-world understanding
-
----
-
-
