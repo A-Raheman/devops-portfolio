@@ -170,6 +170,65 @@ Fix:
 
 ## Screenshots
 
+### 🚀 Final Application Output
+![Final App Access](screenshots/01-final-app-access-eks.png)
+
+---
+
+### ☁️ EKS Cluster Setup
+
+#### Cluster Creation (eksctl)
+![EKS Cluster Creation Start](screenshots/13-eks-cluster-creation-start.png)
+![EKS Cluster Creation Complete](screenshots/13-eks-cluster-creation-complete.png)
+
+#### Update kubeconfig & Connect
+![Update Kubeconfig](screenshots/06-aws-eks-update-kubeconfig.png)
+
+#### Verify Nodes
+![Kubectl Nodes](screenshots/02-kubectl-get-nodes-eks.png)
+![Kubectl Nodes Confirm](screenshots/08-kubectl-get-nodes-confirm.png)
+
+#### System Pods Running
+![System Pods](screenshots/07-k8s-system-pods-running.png)
+
+---
+
+### 📦 ECR (Elastic Container Registry)
+
+#### Repository Created
+![ECR Repository](screenshots/12-ecr-repository-console.png)
+
+#### Login to ECR
+![ECR Login](screenshots/09-ecr-login-success.png)
+
+---
+
+### 🐳 Docker Build & Push
+
+#### Build Docker Image
+![Docker Build](screenshots/10-docker-build-image.png)
+
+#### Push to ECR
+![ECR Push Start](screenshots/11-ecr-push-start.png)
+![ECR Push Success](screenshots/11-ecr-push-success.png)
+
+---
+
+### ⚙️ Helm Deployment
+
+#### Install Helm Release
+![Helm Install](screenshots/05-helm-install-release.png)
+
+---
+
+### 🐞 Troubleshooting & Debugging
+
+#### Pod Pending Issue
+![Pod Pending](screenshots/04-pod-pending-initial-error.png)
+
+#### Initial Service (NodePort)
+![NodePort Service](screenshots/03-k8s-service-nodeport-initial.png)
+
 ---
 
 ## Cost Optimization
