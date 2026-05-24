@@ -2,8 +2,8 @@
 
 ## Project Overview
 
-In modern production environments, monitoring is one of the most critical resposibilites of a DevOps Engineer. Without observability, teams cannot proactively identitfy CPU spikes, memory leaks, pod crashes, or infrastructure failures.
-This proect demonstrates how to implement a **production-style Kubernetes monitoring stack** using **prometheus, Grafana, and Alertmanager** deployed via **Helm** in Kubernetes.
+In modern production environments, monitoring is one of the most critical responsibilities of a DevOps Engineer. Without observability, teams cannot proactively identify CPU spikes, memory leaks, pod crashes, or infrastructure failures.
+This project demonstrates how to implement a **production-style Kubernetes monitoring stack** using **prometheus, Grafana, and Alertmanager** deployed via **Helm** in Kubernetes.
 This project also includes a **real-world incident simulation** where a CPU-intensive pod was intentionally deployed to generate abnormal resource usage, monitored through Grafana dashboards, detected using Prometheus alerts rules, and remediated as part of an incident response workflow.
 This project reflects how **3-4 year experienced DevOps/SRE engineers monitor, detect, investigate, and remediate production issues.**
 
@@ -110,7 +110,7 @@ Adds the official Prometheus Helm repository.
 
 ### Why we use it 
 
-Helm charts simplify the deployment of production-grade Kubernetes applications without writing hundreds of YAML files manaully.
+Helm charts simplify the deployment of production-grade Kubernetes applications without writing hundreds of YAML files manually.
 
 ---
 
@@ -235,7 +235,7 @@ Provides:
 - Memory Monitoring
 - Pod Health
 - Node Metrics
-- Resources Utilization
+- Resource Utilization
 
 ### Screenshot
 
@@ -271,9 +271,9 @@ kubectl top pods
 
 ## Scenario
 
-A bad deployment caused exccessive CPU consumpution.
+A bad deployment caused excessive CPU consumption.
 
-To simulate this production issues:
+To simulate this production issue:
 
 ```bash
 kubectl run cpu-stress \
@@ -305,7 +305,7 @@ CPU usage increased in Grafana dashboard.
 
 ---
 
-# Step 10 - Investigating Resources Usage
+# Step 10 - Investigating Resource Usage
 
 Check pod resources consumption:
 
@@ -478,7 +478,7 @@ Incident Resolved
 
 ### 1. What is Prometheus?
 
-Promethues is open-source monitoring and alerting tool used to collect metrics from infrastructure and applications.
+Prometheus is open-source monitoring and alerting tool used to collect metrics from infrastructure and applications.
 
 ---
 
@@ -502,7 +502,7 @@ Helm simplifies deployment of complex Kubernetes applications.
 
 ## Intermediate Level
 
-### 5. Why did `kubectl too pods` fail initially?
+### 5. Why did `kubectl top pods` fail initially?
 
 Metrics Server was not installed.
 
@@ -554,4 +554,5 @@ By completing this project, I learned:
 **Abdul Raheman**
 
 Cloud & DevOps Engineer
+
 AWS | Docker | Kubernetes | Terraform | Jenkins | Monitoring
