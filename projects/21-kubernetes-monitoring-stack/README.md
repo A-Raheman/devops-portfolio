@@ -80,10 +80,10 @@ Alert Triggering
 │   └── high-cpu-alert-rule.yaml
 │
 ├── screenshots/
-│   ├── 01-monitoring-pods-running.png
-│   ├── 02-grafana-login-success.png
-│   ├── 03-working-grafana-dashboard.png
-│   ├── 04-cpu-spike-monitoring.png
+│   ├── 01-grafana-login-success.png
+│   ├── 02-grafana-dashboard-import.png
+│   ├── 03-cpu-spike-monitoring.png
+│   ├── 04-cpu-normal-after-remediation.png
 │   ├── 05-custom-high-cpu-alert-firing.png
 │   └── 06-cpu-normal-after-remediation.png
 │
