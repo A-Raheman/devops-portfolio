@@ -183,7 +183,9 @@ alertmanager-monitoring-kube-prometheus-alertmanager
 
 ### Screenshot
 
-![Monitoring Pods](screenshots/01-monitoring-pods-running.png)
+### 1. Grafana Access Verified
+
+![Grafana Login Success](./screenshots/01-grafana-login-success.png)
 
 ---
 
@@ -215,7 +217,9 @@ admin
 
 ### Screenshot
 
-![Grafana Login](screenshots/02-grafana-login-success.png)
+### 2. Kubernetes Dashboard Imported in Grafana
+
+![Grafana Dashboard Import](./screenshots/02-grafana-dashboard-import.png)
 
 ---
 
@@ -239,7 +243,9 @@ Provides:
 
 ### Screenshot
 
-![Grafana Dashboard](screenshots/03-working-grafana-dashboard.png)
+### 3. CPU Spike Observed in Grafana
+
+![CPU Spike Monitoring](screenshots/03-cpu-spike-monitoring.png)
 
 ---
 
@@ -301,7 +307,9 @@ CPU usage increased in Grafana dashboard.
 
 ### Screenshot
 
-![CPU Spike Monitoring](screenshots/04-cpu-spike-monitoring.png)
+### 4. CPU Normal After Remediation
+
+![CPU Normal After Remediation](screenshots/04-cpu-normal-after-remediation.png)
 
 ---
 
@@ -376,7 +384,9 @@ Pending → Firing
 
 ### Screenshot
 
-![Custom Alert](screenshots/05-custom-high-cpu-alert-firing.png)
+### 5. Custom Prometheus Alert Firing
+
+![Custom High CPU Alert Firing](screenshots/05-custom-high-cpu-alert-firing.png)
 
 ---
 
@@ -396,7 +406,9 @@ kubectl delete pod cpu-stress
 
 ### Screenshot 
 
-![CPU Normalized](screenshots/06-cpu-normal-after-remediation.png)
+### 6. Final Cluster Monitoring View
+
+![Final CPU Normal After Remediation](screenshots/06-cpu-normal-after-remediation.png)
 
 ---
 
