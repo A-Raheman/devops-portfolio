@@ -9,9 +9,9 @@ This project demonstrates a **production-style centralized logging system for Ku
 - **Grafana** → Log visualization and querying
 - **Kubernetes (Minikube)** → Container orchestration
 
-The objective of this project is to simulate how **DevOps Enginners and SRE teams ivestigate production incidents** by collecting, filtering, and analyzing logs from Kubernetes workloads.
+The objective of this project is to simulate how **DevOps Engineers and SRE teams investigate production incidents** by collecting, filtering, and analyzing logs from Kubernetes workloads.
 
-Instead of checkinglogs pod-by-pod using:
+Instead of checking logs pod-by-pod using:
 
 ```bash
 kubectl logs <pod-name>
@@ -76,6 +76,7 @@ Incident Investigation
 │
 │── docs/
 │   └── incident-report.md
+│   └── interview-questions.md
 │
 │── troubleshooting/
 │   └── common-errors.md
@@ -131,7 +132,7 @@ Fetches latest Loki, Promtail, and Grafana Helm charts.
 ```bash
 helm install loki grafana/loki \
  --namespace logging \
- - f manifests/loki-values.yaml
+ -f manifests/loki-values.yaml
 ```
 
 ### Why?
@@ -428,5 +429,5 @@ Successfully built a **production-style centralized logging platform** for Kuber
 
 **Abdul Raheman**
 
-AWS DevOps Engineer
+Cloud & DevOps Engineer
 
