@@ -138,9 +138,11 @@ The following objectives were implemented:
 │   └── 06-drift-auto-corrected-by-argocd.png
 │
 │── docs/
+│   ├── gitops-flow.md
+│   └── interview-questions.md
 │
 │── troubleshooting/
-│
+│   └── common-errors.md
 └── .gitignore
 ```
 
