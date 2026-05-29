@@ -1,0 +1,10 @@
+# Helm packaged artifacts
+*.tgz
+
+# Temporary files
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
