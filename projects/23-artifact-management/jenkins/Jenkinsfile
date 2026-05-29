@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    environment {
+	IMAGE_NAME = "nginx-demo"
+	IMAGE_TAG = "v1.0.${BUILD_NUMBER}"
+	NEXUS_REGISTRY = "localhost:8082"
+	NEXUS_REPO = "docker-hosted"
+    }
+
+    stages {
+	stage('Checkout') {
+	    steps {
+		echo 'Checking out source code...'
+	    }
+	}
+
+	stage('Build Docker Image') {
+	    steps {
+		sh '''
+		cd nexus-demo
+		docker build -t $NEXUS_REGISTRY/$NEXUS_REPO/$IMAGE_NAME:$IMAGE_TAG .
+		'''
+	    }
+
+	stage('Push Docker Image to Nexus') { 
+	    steps {
+		sh '''
+		docker push $NEXUS_REGISTRY/$NEXUS_REPO/$IMAGE_NAME:$IMAGE_TAG
+		'''
+	    }
+	}
+    }
+
+    post {
+	success {
+	    echo "Artifact pushed successfully to Nexus: $NEXUS_REGISTRY/$NEXUS_REPO/$IMAGE_NAME:$IMAGE_TAG"
+	}
+
+	failure {
+	    echo "Pipeline failed. Check Docker login, Nexus availability, and repository configuration."
+	}
+    }
+}

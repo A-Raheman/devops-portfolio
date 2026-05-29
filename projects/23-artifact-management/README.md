@@ -207,6 +207,12 @@ repository in Nexus.
 
 ---
 
+### Jenkins Pipeline Simulation
+
+![Jenkins Pipeline Simulation](screenshots/04-manual-jenkins-pipeline-simulation.png)
+
+---
+
 ## Production Use Case
 
 In enterprise CI/CD environments:
@@ -264,6 +270,33 @@ Planned enhancements:
 - CI/CD artifact versioning
 - Kubernetes deployment from Nexus
 - Security scanning integration
+
+---
+
+## Jenkins Pipeline Simulation
+
+A Jenkins pipeline file was created to automate the Docker artifact lifecycle.
+
+Pipeline path:
+
+```text
+jenkins/Jenkinsfile
+```
+
+The pipeline is designed to:
+- Checkout source code
+- Build Docker image
+- Tag image using Jenkins build number
+- Push Docker image to Nexus
+
+Manual validation was performed using the same commands that Jenkins would execute:
+
+```bash
+docker build -t localhost:8082/docker-hosted/nginx-demo:v1.0.manual nexus-demo
+docker push localhost:8082/docker-hosted/nginx-demo:v1.0.manual
+```
+
+This confirmed that the pipeline logic is valid and Nexus can receive versioned Docker artifacts successfully.
 
 ---
 
