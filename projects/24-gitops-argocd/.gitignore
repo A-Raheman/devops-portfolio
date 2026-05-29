@@ -1,0 +1,17 @@
+# Kubernetes temporary files
+*.log
+*.tmp
+
+# macOS / Windows files
+.DS_Store
+Thumbs.db
+
+# Kubernetes generated files
+*.retry
+
+# Editor files
+.vscode/
+.idea/
+
+# OS metadata
+desktop.ini
