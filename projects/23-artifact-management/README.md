@@ -18,6 +18,39 @@ Instead of directly deploying builds, artifacts are first versioned, stored, and
 - CI/CD integration readiness
 
 ---
+```text
+23-artifact-management/
+│── README.md
+│
+│── screenshots/
+│   ├── 01-docker-artifact-pushed-to-nexus.png
+│   ├── 02-docker-artifact-pulled-from-nexus.png
+│   ├── 03-helm-artifact-uploaded-to-nexus.png
+│   └── 04-manual-jenkins-pipeline-simulation.png
+│
+│── docs/
+│   ├── artifact-flow.md
+│   └── interview-questions.md
+│
+│── troubleshooting/
+│   └── common-errors.md
+│
+│── helm/
+│   ├── nginx-chart/
+│   └── nginx-chart-0.1.0.tgz
+│
+│── nexus-demo/
+│   ├── Dockerfile
+│   └── index.html
+│
+│── jenkins/
+│   └── Jenkinsfile
+│
+│── nexus/
+│
+└── .gitignore
+```
+---
 
 ## Architecture
 
@@ -264,7 +297,7 @@ Through this project, I learned:
 
 Planned enhancements:
 
-- Jenkins integration with Nexus
+- Automated Jenkins → Nexus artifact pipeline
 - Automated Docker artifact push
 - Automated Helm packaging
 - CI/CD artifact versioning
