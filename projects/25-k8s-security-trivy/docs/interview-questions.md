@@ -356,7 +356,7 @@ Container escape
 
 # Most Important Interview Answer
 
-If interviewer asks:
+When asked:
 
 > Why perform security scanning?
 
