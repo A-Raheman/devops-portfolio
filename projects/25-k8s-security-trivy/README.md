@@ -1,4 +1,4 @@
-# Project 25 - Kubernetes Security & Vulnerbility Scanning with Trivy
+# Project 25 - Kubernetes Security & Vulnerability Scanning with Trivy
 
 ## Project Overview
 
@@ -9,7 +9,7 @@ The objective was to:
 - Scan Docker images for CVEs
 - Compare vulnerable vs secure images
 - Scan Kubernetes manifests
-- Remediate sceurity findings
+- Remediate security findings
 - Validate hardened configurations
 - Simulate CI/CD security gates
 
@@ -134,7 +134,10 @@ Implemented:
 │   └── 06-security-gate-failed-build.png
 │
 ├── docs/
+│   ├── security-workflow.md
+│   └── interview-questions.md
 ├── troubleshooting/
+│   └── common-errors.md
 │
 ├── security-gate.sh
 │
@@ -197,7 +200,7 @@ Official images can still contain vulnerabilities.
 
 ---
 
-# Step 3 - Secure Image Comparsion
+# Step 3 - Secure Image Comparison
 
 Scanned:
 
@@ -217,10 +220,10 @@ Result:
 0 vulnerabilities
 ```
 
-Security comparsion:
+Security comparison:
 
 | Image | HIGH | CRITICAL |
-|--------|------|----------|
+|---|---:|---:|
 | nginx:latest | 34 | 2 |
 | nginx:alpine | 0 | 0 |
 
@@ -267,18 +270,18 @@ Implemented:
 
 ```text
 privileged=false
-allowPrivilegeEscalation=False
+allowPrivilegeEscalation=false
 readOnlyRootFilesystem=true
 runAsNonRoot=true
 capabilities drop ALL
-resources limits
-seccomProfile
+resource limits
+seccompProfile
 ```
 
 Validation:
 
 ```text
-Misconfiguration: 0
+Misconfigurations: 0
 ```
 
 ---
@@ -364,7 +367,7 @@ Learned:
 - Kubernetes security
 - Security context
 - Resource governance
-- DevSecOps worklfow
+- DevSecOps workflow
 - Shift-left security
 - Deployment gating
 
