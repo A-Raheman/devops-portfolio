@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backup-nginx
+  namespace: backup-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backup-nginx
+  template:
+    metadata:
+      labels:
+        app: backup-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: backup-nginx-service
+  namespace: backup-demo
+spec:
+  selector:
+    app: backup-nginx
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP

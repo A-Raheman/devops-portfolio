@@ -1,0 +1,53 @@
+Name:         [1mnginx-backup[22m
+Namespace:    velero
+Labels:       velero.io/storage-location=default
+Annotations:  velero.io/resource-timeout=10m0s
+              velero.io/source-cluster-k8s-gitversion=v1.35.1
+              velero.io/source-cluster-k8s-major-version=1
+              velero.io/source-cluster-k8s-minor-version=35
+
+Phase:  [32mCompleted[0m
+
+
+Namespaces:
+  Included:  backup-demo
+  Excluded:  <none>
+
+Resources:
+  Included:        *
+  Excluded:        <none>
+  Cluster-scoped:  auto
+
+Label selector:  <none>
+
+Or label selector:  <none>
+
+Storage Location:  default
+
+Velero-Native Snapshot PVs:    auto
+File System Backup (Default):  false
+Snapshot Move Data:            false
+Data Mover:                    velero
+
+TTL:  720h0m0s
+
+CSISnapshotTimeout:    10m0s
+ItemOperationTimeout:  4h0m0s
+
+Hooks:  <none>
+
+Backup Format Version:  1.1.0
+
+Started:    2026-05-31 12:44:48 +0000 UTC
+Completed:  2026-05-31 12:44:48 +0000 UTC
+
+Expiration:  2026-06-30 12:44:48 +0000 UTC
+
+Total items to be backed up:  23
+Items backed up:              23
+
+Backup Volumes:
+  <error getting backup volume info: Get "http://minio.velero.svc:9000/velero/backups/nginx-backup/nginx-backup-volumeinfo.json.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20260531%2Fminio%2Fs3%2Faws4_request&X-Amz-Date=20260531T131938Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&x-id=GetObject&X-Amz-Signature=2ba585bf6c3092704a64f86407279cb2a9692aad110d972049983fadf60aaa56": dial tcp: lookup minio.velero.svc on 10.255.255.254:53: no such host>
+
+HooksAttempted:  0
+HooksFailed:     0

@@ -1,0 +1,45 @@
+Name:         [1mnginx-backup-20260531130410[22m
+Namespace:    velero
+Labels:       <none>
+Annotations:  <none>
+
+Phase:                       [32mCompleted[0m
+Total items to be restored:  10
+Items restored:              10
+
+Started:    2026-05-31 13:04:10 +0000 UTC
+Completed:  2026-05-31 13:04:10 +0000 UTC
+Warnings:   <error getting warnings: Get "http://minio.velero.svc:9000/velero/restores/nginx-backup-20260531130410/restore-nginx-backup-20260531130410-results.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20260531%2Fminio%2Fs3%2Faws4_request&X-Amz-Date=20260531T131903Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&x-id=GetObject&X-Amz-Signature=efbd781cba16e405544313ec77c8f53e126ab1cc50cf1bd0bf440f070acbd2d9": dial tcp: lookup minio.velero.svc on 10.255.255.254:53: no such host>
+
+Errors:  <error getting errors: Get "http://minio.velero.svc:9000/velero/restores/nginx-backup-20260531130410/restore-nginx-backup-20260531130410-results.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20260531%2Fminio%2Fs3%2Faws4_request&X-Amz-Date=20260531T131903Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&x-id=GetObject&X-Amz-Signature=efbd781cba16e405544313ec77c8f53e126ab1cc50cf1bd0bf440f070acbd2d9": dial tcp: lookup minio.velero.svc on 10.255.255.254:53: no such host>
+
+Backup:  nginx-backup
+
+Namespaces:
+  Included:  all namespaces found in the backup
+  Excluded:  <none>
+
+Resources:
+  Included:        *
+  Excluded:        nodes, events, events.events.k8s.io, backups.velero.io, restores.velero.io, resticrepositories.velero.io, csinodes.storage.k8s.io, volumeattachments.storage.k8s.io, backuprepositories.velero.io
+  Cluster-scoped:  auto
+
+Namespace mappings:  <none>
+
+Label selector:  <none>
+
+Or label selector:  <none>
+
+Restore PVs:  auto
+              <error getting restore volume info: Get "http://minio.velero.svc:9000/velero/restores/nginx-backup-20260531130410/nginx-backup-20260531130410-volumeinfo.json.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20260531%2Fminio%2Fs3%2Faws4_request&X-Amz-Date=20260531T131903Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&x-id=GetObject&X-Amz-Signature=17c07e26f24b7fd3b0f5248856a250d687f740043ac852e64decdd8cb474e90d": dial tcp: lookup minio.velero.svc on 10.255.255.254:53: no such host>
+
+Existing Resource Policy:   <none>
+ItemOperationTimeout:       4h0m0s
+
+Preserve Service NodePorts:  auto
+
+Uploader config:
+
+
+HooksAttempted:   0
+HooksFailed:      0
