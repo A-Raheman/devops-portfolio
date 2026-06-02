@@ -122,8 +122,12 @@ Implemented:
 │   └── 04-application-restored-from-backup.png
 │
 ├── docs/
+│   ├── disaster-recovery-workflow.md
+│   └── interview-questions.md
 │
 ├── troubleshooting/
+│   ├── common-errors.md
+│   └── minio-dns-note.md
 │
 └── .gitignore
 ```

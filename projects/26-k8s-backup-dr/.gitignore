@@ -1,0 +1,25 @@
+# Velero backups
+*.tar.gz
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Terraform
+.terraform/
+
+# Python
+__pycache__/
+
+# Kubernetes
+*.swp
