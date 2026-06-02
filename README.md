@@ -1,144 +1,283 @@
-# 🚀 DevOps Portfolio – Abdul Raheman
+# 🚀 DevOps & Cloud Engineering Portfolio
 
-## 👋 About Me
+Welcome to my DevOps & Cloud Engineering Portfolio.
 
-I am a DevOps & Cloud Engineer focused on building, automating, and deploying scalable applications using modern DevOps tools and cloud platforms.
+This repository contains hands-on projects covering Cloud Computing, DevOps, Kubernetes, CI/CD, Infrastructure as Code (IaC), Monitoring, Logging, GitOps, DevSecOps, and Disaster Recovery.
 
-This repository represents my **hands-on journey from local development to production-grade cloud deployments**, covering CI/CD, containerization, Kubernetes, and AWS.
-
----
-
-## 🧠 What I Bring
-
-- End-to-end DevOps implementation (Build → Deploy → Monitor)
-- Real-world debugging experience (not just happy paths)
-- Cloud-native deployment using AWS (ECR, EKS)
-- Strong foundation in:
-  - Docker
-  - Kubernetes
-  - Helm
-  - Jenkins
-  - CI/CD pipelines
+The primary objective of this portfolio is to demonstrate practical implementation of modern DevOps practices through real-world projects that simulate production environments, operational challenges, and platform engineering workflows.
 
 ---
 
-## 🏆 Featured Projects
+# 👨‍💻 About Me
 
-### 🔹 1. CI/CD Pipeline with Helm (Project 19)
-- Jenkins pipeline builds Docker image
-- Pushes to registry
-- Deploys to Kubernetes using Helm
+I am a Cloud & DevOps Engineer with hands-on experience building and managing cloud-native environments using AWS, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, ArgoCD, Prometheus, Grafana, Loki, Trivy, and Velero.
 
-👉 Demonstrates:
-- Full CI/CD automation
-- Infrastructure + deployment integration
+My focus areas include:
 
----
+* Cloud Infrastructure
+* Infrastructure Automation
+* CI/CD Pipelines
+* Kubernetes Administration
+* Monitoring & Observability
+* DevSecOps
+* Disaster Recovery
+* Platform Reliability Engineering
 
-### 🔹 2. AWS EKS Deployment with ECR (Project 20)
-- Docker image pushed to Amazon ECR
-- Deployed to AWS EKS cluster
-- Exposed using LoadBalancer
-
-👉 Demonstrates:
-- Real cloud deployment
-- Kubernetes in production environment
-- Debugging cloud-native issues
+I enjoy solving infrastructure, deployment, automation, observability, and reliability challenges while continuously improving operational efficiency and system resilience.
 
 ---
 
-### 🔹 3. Kubernetes Ingress Routing (Project 17)
-- Implemented path-based routing
-- Fixed real backend/service issues
+# 🛠️ Technologies Covered
 
-👉 Demonstrates:
-- Traffic routing
-- Debugging service connectivity
+## ☁️ Cloud Platforms
 
----
+* AWS
 
-### 🔹 4. Helm Kubernetes Package Management (Project 18)
-- Created reusable Helm charts
-- Managed multiple environments (dev/prod)
-
-👉 Demonstrates:
-- Kubernetes abstraction
-- Scalable deployments
+  * EC2
+  * IAM
+  * VPC
+  * S3
+  * ECR
+  * EKS
+  * CloudWatch
+  * Auto Scaling
+  * Load Balancers
 
 ---
 
-### 🔹 5. CI/CD with Docker + EC2 (Project 15/16)
-- Built pipelines using Jenkins
-- Deployed apps on AWS EC2
+## 🐧 Operating Systems
 
-👉 Demonstrates:
-- Traditional + cloud deployment hybrid
-
----
-
-## 🛠️ Tech Stack
-
-| Category | Tools |
-|--------|------|
-| Containerization | Docker |
-| CI/CD | Jenkins |
-| Cloud | AWS (ECR, EKS, EC2) |
-| Orchestration | Kubernetes |
-| Packaging | Helm |
-| Monitoring (Next Phase) | Prometheus, Grafana |
+* Linux (Ubuntu)
+* WSL2
+* Windows
 
 ---
 
-## 🧠 DevOps Mindset (What I’ve Learned)
+## 🔄 Version Control
 
-- “If it works locally, it doesn’t mean it works in cloud”
-- Services without endpoints = silent failures
-- ImagePullBackOff = registry/auth/config issue
-- Kubernetes failures are mostly:
-  - networking
-  - resource constraints
-  - misconfiguration
+* Git
+* GitHub
 
 ---
 
-## 🐞 Real Problems I Solved
+## ⚙️ CI/CD
 
-- Fixed Kubernetes Pod Pending (node capacity issue)
-- Debugged ImagePullBackOff (wrong image source)
-- Solved LoadBalancer not responding (no endpoints)
-- Fixed Jenkins pipeline failures (branch + credential issues)
-- Resolved Docker port conflicts and container networking issues
+* Jenkins
+* GitHub Actions
 
 ---
 
-## 📈 What’s Next
+## 📦 Containers & Orchestration
 
-- Monitoring with Prometheus & Grafana
-- GitOps with ArgoCD
-- Terraform for Infrastructure as Code
-- Advanced Kubernetes (HPA, autoscaling)
+* Docker
+* Docker Compose
+* Kubernetes
+* Helm
 
 ---
 
-## 📂 Repository Structure
+## 🏗️ Infrastructure as Code
+
+* Terraform
+
+---
+
+## 🔁 GitOps
+
+* ArgoCD
+
+---
+
+## 📊 Monitoring & Observability
+
+* Prometheus
+* Grafana
+* Alertmanager
+
+---
+
+## 📜 Logging
+
+* Loki
+* Promtail
+
+---
+
+## 🏛️ Artifact Management
+
+* Sonatype Nexus Repository
+
+---
+
+## 🔐 DevSecOps
+
+* Trivy
+* Kubernetes Security Scanning
+* Security Gates
+
+---
+
+## 💾 Backup & Disaster Recovery
+
+* Velero
+* MinIO
+
+---
+
+# 📚 Portfolio Roadmap
+
+This repository follows a structured DevOps learning path progressing from foundational concepts to production-grade implementations.
+
+## Phase 1 – Foundations
+
+* Linux Administration
+* Git & GitHub
+* Shell Scripting
+* Docker Fundamentals
+* CI/CD Basics
+
+## Phase 2 – Cloud & Infrastructure
+
+* AWS Fundamentals
+* Terraform
+* Infrastructure Automation
+* Cloud Deployments
+
+## Phase 3 – Kubernetes & Platform Engineering
+
+* Kubernetes
+* Ingress
+* Helm
+* Monitoring
+* Logging
+* GitOps
+* DevSecOps
+* Disaster Recovery
+
+---
+
+# 🌟 Featured Production-Oriented Projects
+
+| Project                        | Technologies                          | Skills Demonstrated                                |
+| ------------------------------ | ------------------------------------- | -------------------------------------------------- |
+| Kubernetes Monitoring Stack    | Prometheus, Grafana                   | Monitoring, Alerting, Incident Detection           |
+| Centralized Logging Platform   | Loki, Promtail, Grafana               | Log Aggregation, Troubleshooting                   |
+| Artifact Management Platform   | Nexus, Docker Registry, Helm Registry | Artifact Storage & Versioning                      |
+| GitOps with ArgoCD             | ArgoCD, Kubernetes                    | Continuous Delivery, Self-Healing, Drift Detection |
+| Kubernetes Security with Trivy | Trivy, Kubernetes                     | Vulnerability Scanning, DevSecOps                  |
+| Backup & Disaster Recovery     | Velero, MinIO                         | Backup, Restore, Disaster Recovery                 |
+
+---
+
+# 📈 Skills Demonstrated
+
+This portfolio demonstrates practical experience in:
+
+### DevOps
+
+* CI/CD Pipelines
+* Infrastructure Automation
+* Release Management
+* Configuration Management
+
+### Kubernetes
+
+* Deployments
+* Services
+* Ingress
+* Helm Charts
+* Monitoring
+* Logging
+* Security
+* Backup & Recovery
+
+### Cloud Engineering
+
+* AWS Infrastructure
+* Cloud Deployments
+* Networking Concepts
+* Storage Services
+* Identity & Access Management
+
+### Reliability Engineering
+
+* Monitoring
+* Alerting
+* Logging
+* Incident Response
+* Disaster Recovery
+
+---
+
+# 🏆 Certifications
+
+* AWS Certified Developer – Associate
+* Google Cloud Professional Cloud Architect
+* Lean Six Sigma White Belt
+* Scrum Foundation Professional Certificate
+
+---
+
+# 📂 Repository Structure
 
 ```text
-projects/
-  ├── 01-... → Fundamentals
-  ├── 10-... → Docker & CI/CD
-  ├── 15-... → AWS + Deployment
-  ├── 17-... → Kubernetes Networking
-  ├── 18-... → Helm
-  ├── 19-... → CI/CD + Helm
-  └── 20-... → AWS EKS Deployment
+devops-portfolio/
+│
+├── projects/
+│   ├── 01-linux-fundamentals
+│   ├── 02-git-github
+│   ├── 03-shell-scripting
+│   ├── ...
+│   ├── 21-k8s-monitoring-stack
+│   ├── 22-centralized-logging
+│   ├── 23-artifact-management
+│   ├── 24-gitops-argocd
+│   ├── 25-k8s-security-trivy
+│   └── 26-k8s-backup-dr
+│
+└── README.md
 ```
 
 ---
 
-## 👨‍ Author
+# 📊 Portfolio Statistics
 
-**Abdul Raheman**
-
-DevOps Engineer | AWS Cloud Engineer
+* 26+ Hands-On DevOps Projects
+* AWS Cloud Projects
+* Kubernetes Projects
+* CI/CD Implementations
+* Infrastructure as Code Projects
+* GitOps Workflows
+* DevSecOps Implementations
+* Monitoring & Observability Solutions
+* Backup & Disaster Recovery Labs
 
 ---
+
+# 🎯 Current Focus
+
+Currently expanding expertise in:
+
+* Advanced Kubernetes Operations
+* Platform Engineering
+* Site Reliability Engineering (SRE)
+* Production-Grade AWS Infrastructure
+* Service Mesh
+* Advanced CI/CD Patterns
+* Cloud-Native Security
+
+---
+
+# 🤝 Connect With Me
+
+### GitHub
+
+github.com/A-Raheman
+
+---
+
+# ⭐ Repository Goal
+
+The goal of this portfolio is to demonstrate practical DevOps, Cloud, Kubernetes, Automation, Observability, Security, and Reliability Engineering skills through hands-on implementation and real-world project simulations.
+
+If you find this repository useful, feel free to explore the projects and provide feedback.
