@@ -4,7 +4,7 @@
 
 This project demonstrates a production-style Kubernetes Backup and Disaster Recovery (DR) workflow using velero.
 
-The Objective was to:
+The objective was to:
 
 - Deploy a Kubernetes application 
 - Create backups using Velero
@@ -13,7 +13,7 @@ The Objective was to:
 - Restore the application from backup
 - Validate successful recovery
 
-This project demonstrates core Site Reliability Enginnering (SRE) and Disaster Recovery practices used in production Kubernetes environments.
+This project demonstrates core Site Reliability Engineering (SRE) and Disaster Recovery practices used in production Kubernetes environments.
 
 ---
 
@@ -191,7 +191,7 @@ Pods
 Application:
 
 ```text
-nginx:apline
+nginx:alpine
 ```
 
 ---
