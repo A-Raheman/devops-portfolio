@@ -1,0 +1,394 @@
+# Project 28 — Kubernetes Autoscaling & Resilience
+
+## Project Overview
+
+This project demonstrates Kubernetes autoscaling and self-healing capabilities using Horizontal Pod Autoscaler (HPA), resource requests and limits, and Kubernetes Deployment controllers.
+
+The goal is to build a resilient application capable of:
+
+- Automatically scaling under load
+- Scaling down when demand decreases
+- Recovering from pod failures
+- Enforcing resource governance
+- Maintaining application availability
+
+---
+
+## Architecture
+
+```text
+User Traffic
+      ↓
+Kubernetes Service
+      ↓
+Deployment
+      ↓
+Pods
+      ↓
+Metrics Server
+      ↓
+Horizontal Pod Autoscaler
+      ↓
+Automatic Scaling Decisions
+```
+
+---
+
+## Tech Stack
+
+- Kubernetes
+- Minikube
+- Docker
+- Metrics Server
+- Horizontal Pod Autoscaler (HPA)
+- Linux
+- kubectl
+
+---
+
+## Project Objectives
+
+Implemented:
+
+- Resource Requests
+- Resource Limits
+- Horizontal Pod Autoscaler
+- Scale-Up Testing
+- Scale-Down Testing
+- Self-Healing Validation
+- Resilience Verification
+
+---
+
+## Project Structure
+
+```text
+28-k8s-autoscaling-resilience/
+│
+├── README.md
+│
+├── manifests/
+│   ├── nginx-deployment.yaml
+│   ├── nginx-service.yaml
+│   └── hpa.yaml
+│
+├── screenshots/
+│   ├── 01-autoscaling-app-running.png
+│   ├── 02-hpa-created.png
+│   ├── 03-hpa-scaled-up-under-load.png
+│   ├── 04-hpa-scaled-down-after-load.png
+│   ├── 05-self-healing-pod-recovery.png
+│   ├── 06-resource-requests-and-limits.png
+│   ├── 07-project-28-final-state.png
+│   └── 08-metrics-and-hpa-validation.png
+│
+├── docs/
+│
+├── troubleshooting/
+│
+└── .gitignore
+```
+
+---
+
+# Step 1 - Metrics Server
+
+Enabled Metrics Server to provide CPU and memory utilization metrics.
+
+Verification:
+
+```bash
+kubectl top nodes
+kubectl top pods
+```
+
+Purpose:
+
+```text
+Provide metrics required by HPA
+```
+
+---
+
+# Step 2 - Deploy Application
+
+Created:
+
+```text
+autoscaling-nginx
+```
+
+Initial replicas:
+
+```text
+1
+```
+
+Configured:
+
+```yaml
+requests:
+  cpu: 100m
+  memory: 128Mi
+
+limits:
+  cpu: 200m
+  memory: 256Mi
+```
+
+---
+
+# Step 3 - Create Service
+
+Created:
+
+```text
+autoscaling-nginx-service
+```
+
+Purpose:
+
+```text
+Expose application internally
+```
+
+---
+
+# Step 4 - Configure Horizontal Pod Autoscaler
+
+Created:
+
+```text
+autoscaling-nginx-hpa
+```
+
+Configuration:
+
+```text
+Min Replicas: 1
+Max Replicas: 5
+Target CPU Utilization: 50%
+```
+
+---
+
+# Step 5 - Scale-Up Demonstration
+
+Generated load using:
+
+```bash
+kubectl run load-generator \
+--image=busybox
+```
+
+Result:
+
+```text
+CPU Utilization Increased
+        ↓
+HPA Triggered
+        ↓
+Pods Scaled Up
+```
+
+---
+
+# Step 6 — Scale-Down Demonstration
+
+Stopped load generator.
+
+Result:
+
+```text
+CPU Utilization Reduced
+        ↓
+HPA Triggered
+        ↓
+Pods Scaled Down
+```
+
+---
+
+# Step 7 - Self-Healing Demonstration
+
+Manually deleted application pod.
+
+Command:
+
+```bash
+kubectl delete pod <pod-name>
+```
+
+Result:
+
+```text
+Pod Deleted
+      ↓
+Replica Count Reduced
+      ↓
+Deployment Controller Detected Drift
+      ↓
+New Pod Created Automatically
+```
+
+This demonstrates Kubernetes self-healing.
+
+---
+
+# Step 8 — Resource Governance
+
+Configured:
+
+```yaml
+requests:
+  cpu: 100m
+  memory: 128Mi
+
+limits:
+  cpu: 200m
+  memory: 256Mi
+```
+
+Benefits:
+
+- Predictable scheduling
+- Resource protection
+- Prevention of noisy neighbors
+- Cluster stability
+
+---
+
+## Screenshots
+
+### Application Running
+
+![App](screenshots/01-autoscaling-app-running.png)
+
+---
+
+### HPA Created
+
+![HPA](screenshots/02-hpa-created.png)
+
+---
+
+### HPA Scale Up
+
+![ScaleUp](screenshots/03-hpa-scaled-up-under-load.png)
+
+---
+
+### HPA Scale Down
+
+![ScaleDown](screenshots/04-hpa-scaled-down-after-load.png)
+
+---
+
+### Self-Healing Validation
+
+![SelfHealing](screenshots/05-self-healing-pod-recovery.png)
+
+---
+
+### Resource Requests and Limits
+
+![Resources](screenshots/06-resource-requests-and-limits.png)
+
+---
+
+### Final State
+
+![Final](screenshots/07-project-28-final-state.png)
+
+---
+
+### Metrics Validation
+
+![Metrics](screenshots/08-metrics-and-hpa-validation.png)
+
+---
+
+## Key Learning Outcomes
+
+Learned:
+
+- Kubernetes Autoscaling
+- Horizontal Pod Autoscaler
+- Metrics Server Integration
+- Resource Requests
+- Resource Limits
+- Self-healing Architecture
+- Resilience Engineering
+- Availability Concepts
+
+---
+
+## Production Benefits
+
+### Autoscaling
+
+```text
+Automatic Capacity Management
+```
+
+### Self-Healing
+
+```text
+Automatic Recovery
+```
+
+### Resource Limits
+
+```text
+Cluster Stability
+```
+
+### Resilience
+
+```text
+Improved Availability
+```
+
+---
+
+## Real-World Use Cases
+
+Examples:
+
+- E-commerce Platforms
+- SaaS Applications
+- Streaming Services
+- Banking Systems
+- Cloud-Native Applications
+
+---
+
+## Interview Questions Answered
+
+- What is HPA?
+- How does Kubernetes autoscaling work?
+- What is Metrics Server?
+- What are requests and limits?
+- What happens when a pod crashes?
+- How does Kubernetes provide self-healing?
+- How do you improve application resilience?
+
+---
+
+## Future Improvements
+
+Potential enhancements:
+
+- Cluster Autoscaler
+- KEDA Event-Driven Autoscaling
+- VPA (Vertical Pod Autoscaler)
+- Predictive Scaling
+- Multi-Cluster Resilience
+
+---
+
+## Author
+
+**Abdul Raheman**
+
+Cloud | DevOps | Kubernetes | Platform Engineering | SRE
