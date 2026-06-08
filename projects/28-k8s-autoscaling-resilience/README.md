@@ -83,8 +83,12 @@ Implemented:
 │   └── 08-metrics-and-hpa-validation.png
 │
 ├── docs/
+│   ├── autoscaling-workflow.md
+│   ├── resilience-concepts.md
+│   └── interview-questions.md
 │
 ├── troubleshooting/
+│   └── common-errors.md
 │
 └── .gitignore
 ```
@@ -302,7 +306,7 @@ Benefits:
 
 ---
 
-### Metrics Validation
+### Metrics and HPA Validation
 
 ![Metrics](screenshots/08-metrics-and-hpa-validation.png)
 
