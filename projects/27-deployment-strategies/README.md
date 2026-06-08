@@ -123,8 +123,12 @@ Implemented:
 │   └── 06-canary-promoted-to-production.png
 │
 ├── docs/
+│   ├── deployment-strategy-comparison.md
+│   ├── release-workflow.md
+│   └── interview-questions.md
 │
 ├── troubleshooting/
+│   └── common-errors.md
 │
 └── .gitignore
 ```
