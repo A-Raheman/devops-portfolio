@@ -2,7 +2,7 @@
 
 ## Project Overview 
 
-This project demonstrates Infrastruture as Code (IaC) using Terraform to provision AWS networking and compute resources.
+This project demonstrates Infrastructure as Code (IaC) using Terraform to provision AWS networking and compute resources.
 
 The infrastructure was created entirely through Terraform without manually creating resources in the AWS Console.
 
@@ -96,8 +96,12 @@ Implemented:
 │   └── 09-aws-cleanup-verification.png
 │
 ├── docs/
+│   ├── terraform-workflow.md
+│   ├── aws-networking-concepts.md
+│   └── interview-questions.md
 │
 ├── troubleshooting/
+│   └── common-errors.md
 │
 └── .gitignore
 ```
@@ -407,12 +411,5 @@ Potential enhancements:
 
 Cloud | DevOps | AWS | Terraform | Platform Engineering
 
-After saving, reply:
 
-README DONE
 
-Then we'll create:
-
-docs/terraform-workflow.md
-
-which is one of the most commonly asked Terraform interview topics. 🔥
