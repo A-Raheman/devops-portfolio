@@ -373,7 +373,7 @@ Prevent Unnecessary AWS Charges
 
 ### Failover Test
 
-![Failover Test](screenshots/11-ha-failover-test.png)
+![Failover Test](screenshots/11-ha-failover-test.png.png)
 
 ---
 
