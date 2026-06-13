@@ -105,8 +105,12 @@ Implemented:
 │   └── 14-aws-cleanup-verification.png
 │
 ├── docs/
+│   ├── aws-ha-workflow.md
+│   ├── high-availability-concepts.md
+│   └── interview-questions.md
 │
 ├── troubleshooting/
+│   └── common-errors.md
 │
 └── .gitignore
 ```
@@ -250,7 +254,7 @@ Traffic Successfully Routed
 Purpose:
 
 ```text
-Validate Load Balancer Functionally
+Validate Load Balancer Functionality
 ```
 
 ---
