@@ -2,3 +2,10 @@
 *.key
 *.crt
 .env
+
+# Terraform generated files
+**/.terraform/
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
