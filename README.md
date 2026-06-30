@@ -1,126 +1,64 @@
-# 🚀 DevOps & Cloud Engineering Portfolio
+# 🚀 DevOps Portfolio
 
-Welcome to my DevOps & Cloud Engineering Portfolio.
+A production-oriented DevOps portfolio documenting my journey through hands-on projects covering Linux, Git, Docker, Jenkins, Kubernetes, Terraform, AWS, CI/CD, Observability, GitOps, Security, High Availability, and Infrastructure Automation.
 
-This repository contains hands-on projects covering Cloud Computing, DevOps, Kubernetes, CI/CD, Infrastructure as Code (IaC), Monitoring, Logging, GitOps, DevSecOps, and Disaster Recovery.
-
-The primary objective of this portfolio is to demonstrate practical implementation of modern DevOps practices through real-world projects that simulate production environments, operational challenges, and platform engineering workflows.
+> **Goal:** Build real-world DevOps skills through practical implementation, troubleshooting, production concepts, and continuous learning.
 
 ---
 
-# 👨‍💻 About Me
+## 📌 Portfolio Highlights
 
-I am a Cloud & DevOps Engineer with hands-on experience building and managing cloud-native environments using AWS, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, ArgoCD, Prometheus, Grafana, Loki, Trivy, and Velero.
-
-My focus areas include:
-
-* Cloud Infrastructure
-* Infrastructure Automation
-* CI/CD Pipelines
-* Kubernetes Administration
-* Monitoring & Observability
-* DevSecOps
-* Disaster Recovery
-* Platform Reliability Engineering
-
-I enjoy solving infrastructure, deployment, automation, observability, and reliability challenges while continuously improving operational efficiency and system resilience.
+- ✅ 30+ Production-Oriented DevOps Projects
+- ✅ AWS Infrastructure & High Availability
+- ✅ Kubernetes Deployments & Operations
+- ✅ Terraform Infrastructure as Code
+- ✅ CI/CD with Jenkins & GitHub Actions
+- ✅ GitOps using ArgoCD
+- ✅ Monitoring, Logging & Observability
+- ✅ Security & Disaster Recovery
+- ✅ Production Troubleshooting & Best Practices *(ongoing)*
 
 ---
 
-# 🛠️ Technologies Covered
+# 👨‍💻 Professional Summary
 
-## ☁️ Cloud Platforms
+This repository showcases my hands-on DevOps learning journey through progressively complex projects focused on building, automating, deploying, monitoring, securing, and troubleshooting modern cloud-native applications.
 
-* AWS
+Rather than isolated tutorials, each project is designed to simulate real-world DevOps workflows and emphasizes:
 
-  * EC2
-  * IAM
-  * VPC
-  * S3
-  * ECR
-  * EKS
-  * CloudWatch
-  * Auto Scaling
-  * Load Balancers
+- Infrastructure as Code (Terraform)
+- Cloud Infrastructure (AWS)
+- Containerization (Docker)
+- Kubernetes Administration
+- CI/CD Automation
+- Observability & Monitoring
+- Deployment Strategies
+- High Availability
+- Production Best Practices
+- Troubleshooting & Root Cause Analysis
 
----
-
-## 🐧 Operating Systems
-
-* Linux (Ubuntu)
-* WSL2
-* Windows
+Every project includes implementation steps, architecture, screenshots, interview questions, troubleshooting guides, and key learning outcomes.
 
 ---
 
-## 🔄 Version Control
+# 🛠️ Technology Stack
 
-* Git
-* GitHub
+| Category | Technologies |
+|----------|--------------|
+| **Cloud** | AWS (EC2, VPC, ALB, IAM, EKS, S3, CloudWatch) |
+| **Infrastructure as Code** | Terraform |
+| **Containers** | Docker, Docker Compose |
+| **Container Orchestration** | Kubernetes, Helm |
+| **CI/CD** | Jenkins, GitHub Actions |
+| **GitOps** | ArgoCD |
+| **Monitoring** | Prometheus, Grafana |
+| **Logging & Observability** | Loki, Promtail, Jaeger |
+| **Web Server** | NGINX |
+| **Operating System** | Linux (Ubuntu), Bash |
+| **Version Control** | Git, GitHub |
+| **Networking** | VPC, Load Balancers, Ingress, Services, DNS |
+| **Automation** | Shell Scripting, Terraform |
 
----
-
-## ⚙️ CI/CD
-
-* Jenkins
-* GitHub Actions
-
----
-
-## 📦 Containers & Orchestration
-
-* Docker
-* Docker Compose
-* Kubernetes
-* Helm
-
----
-
-## 🏗️ Infrastructure as Code
-
-* Terraform
-
----
-
-## 🔁 GitOps
-
-* ArgoCD
-
----
-
-## 📊 Monitoring & Observability
-
-* Prometheus
-* Grafana
-* Alertmanager
-
----
-
-## 📜 Logging
-
-* Loki
-* Promtail
-
----
-
-## 🏛️ Artifact Management
-
-* Sonatype Nexus Repository
-
----
-
-## 🔐 DevSecOps
-
-* Trivy
-* Kubernetes Security Scanning
-* Security Gates
-
----
-
-## 💾 Backup & Disaster Recovery
-
-* Velero
-* MinIO
 
 ---
 
@@ -156,56 +94,151 @@ This repository follows a structured DevOps learning path progressing from found
 
 ---
 
-# 🌟 Featured Production-Oriented Projects
+# ⭐ Featured Projects
 
-| Project                        | Technologies                          | Skills Demonstrated                                |
-| ------------------------------ | ------------------------------------- | -------------------------------------------------- |
-| Kubernetes Monitoring Stack    | Prometheus, Grafana                   | Monitoring, Alerting, Incident Detection           |
-| Centralized Logging Platform   | Loki, Promtail, Grafana               | Log Aggregation, Troubleshooting                   |
-| Artifact Management Platform   | Nexus, Docker Registry, Helm Registry | Artifact Storage & Versioning                      |
-| GitOps with ArgoCD             | ArgoCD, Kubernetes                    | Continuous Delivery, Self-Healing, Drift Detection |
-| Kubernetes Security with Trivy | Trivy, Kubernetes                     | Vulnerability Scanning, DevSecOps                  |
-| Backup & Disaster Recovery     | Velero, MinIO                         | Backup, Restore, Disaster Recovery                 |
+These projects best demonstrate my hands-on DevOps skills and production-oriented learning.
+
+| Project | Highlights |
+|---------|------------|
+| **Project 30 – AWS High Availability Architecture** | Multi-AZ architecture, Application Load Balancer, Health Checks, Failover Testing, Terraform |
+| **Project 29 – Terraform AWS Infrastructure** | Infrastructure as Code, VPC, Subnets, Security Groups, EC2, Automated Provisioning |
+| **Project 28 – Kubernetes Autoscaling & Resilience** | Horizontal Pod Autoscaler, Resource Limits, Self-Healing, Production Resilience |
+| **Project 27 – Kubernetes Deployment Strategies** | Rolling Updates, Blue-Green Deployment, Canary Deployment |
+| **Project 26 – Backup & Disaster Recovery** | Kubernetes Backup Strategy, Disaster Recovery Planning |
+| **Project 25 – Kubernetes Security** | RBAC, Service Accounts, Security Contexts |
+| **Project 24 – GitOps with ArgoCD** | Declarative Continuous Delivery using GitOps |
+| **Project 22 – Centralized Logging** | Loki, Promtail, Grafana |
+| **Project 21 – Kubernetes Monitoring** | Prometheus, Grafana, Metrics Collection, Alerting |
+| **Mini Project 31A & 31B** | ConfigMaps, Secrets, Rolling Updates, Rollbacks |
 
 ---
 
-# 📈 Skills Demonstrated
+# 📚 Complete Project Index
 
-This portfolio demonstrates practical experience in:
+## 🐧 Linux & Git Fundamentals
 
-### DevOps
+| Project | Topic |
+|---------|-------|
+| Project 01 | Linux Fundamentals |
+| Project 02 | Shell Scripting & Linux Administration |
+| Project 03 | Git & GitHub Workflow |
 
-* CI/CD Pipelines
-* Infrastructure Automation
-* Release Management
-* Configuration Management
+---
 
-### Kubernetes
+## 🐳 Docker & Containerization
 
-* Deployments
-* Services
-* Ingress
-* Helm Charts
-* Monitoring
-* Logging
-* Security
-* Backup & Recovery
+| Project | Topic |
+|---------|-------|
+| Project 04 | Docker Fundamentals |
+| Project 05 | Docker Compose |
+| Project 06 | Docker Networking & Volumes |
+| Project 07 | Dockerizing Applications |
 
-### Cloud Engineering
+---
 
-* AWS Infrastructure
-* Cloud Deployments
-* Networking Concepts
-* Storage Services
-* Identity & Access Management
+## 🔄 CI/CD & Automation
 
-### Reliability Engineering
+| Project | Topic |
+|---------|-------|
+| Project 08 | Jenkins Fundamentals |
+| Project 09 | Jenkins Pipelines |
+| Project 10 | GitHub Actions |
+| Project 11 | CI/CD Pipeline Implementation |
 
-* Monitoring
-* Alerting
-* Logging
-* Incident Response
-* Disaster Recovery
+---
+
+## ☸️ Kubernetes
+
+| Project | Topic |
+|---------|-------|
+| Project 12 | Kubernetes Fundamentals |
+| Project 13 | Services & Networking |
+| Project 14 | Deployments & Scaling |
+| Project 15 | Ingress Controller |
+| Project 16 | Helm Charts |
+| Project 17 | Kubernetes Ingress |
+| Project 18 | Helm Package Management |
+| Project 19 | Jenkins + Helm CI/CD |
+| Project 20 | AWS ECR & Amazon EKS |
+| Project 21 | Kubernetes Monitoring (Prometheus & Grafana) |
+| Project 22 | Centralized Logging (Loki & Promtail) |
+| Project 23 | Artifact Repository |
+| Project 24 | GitOps with ArgoCD |
+| Project 25 | Kubernetes Security |
+| Project 26 | Backup & Disaster Recovery |
+| Project 27 | Deployment Strategies |
+| Project 28 | Autoscaling & Resilience |
+| Mini 31A | ConfigMaps & Secrets |
+| Mini 31B | Rolling Updates & Rollbacks |
+
+---
+
+## ☁️ Cloud & Infrastructure as Code
+
+| Project | Topic |
+|---------|-------|
+| Project 29 | Terraform AWS Infrastructure |
+| Project 30 | AWS High Availability Architecture |
+| Project 31 *(Upcoming)* | Terraform Modules & Reusable Infrastructure |
+| Project 32 *(Upcoming)* | Enterprise Terraform State Management |
+| Project 33 *(Upcoming)* | Production CI/CD Platform |
+| Project 34 *(Upcoming)* | Enterprise DevOps Platform (Capstone) |
+| Project 35 *(Upcoming)* | Production Incident Simulation Lab |
+
+---
+
+# 🎯 Skills Acquired
+
+Through these projects, I have developed practical experience in the following areas:
+
+### Cloud Computing
+- AWS Infrastructure
+- Virtual Private Cloud (VPC)
+- EC2
+- Elastic Load Balancer (ALB)
+- IAM
+- Amazon EKS
+- Cloud Monitoring
+
+### Infrastructure as Code
+- Terraform
+- Resource Provisioning
+- Infrastructure Automation
+- State Management *(Upcoming)*
+
+### Containers & Orchestration
+- Docker
+- Docker Compose
+- Kubernetes
+- Helm
+- Kubernetes Networking
+- Deployments
+- ConfigMaps & Secrets
+- Autoscaling
+- High Availability
+
+### CI/CD & GitOps
+- Jenkins
+- GitHub Actions
+- ArgoCD
+- Continuous Integration
+- Continuous Delivery
+
+### Observability
+- Prometheus
+- Grafana
+- Loki
+- Promtail
+- Jaeger
+- Alerting
+
+### DevOps Practices
+- Deployment Strategies
+- Infrastructure Automation
+- Backup & Disaster Recovery
+- Production Troubleshooting
+- Security Best Practices
+- High Availability
 
 ---
 
@@ -213,44 +246,83 @@ This portfolio demonstrates practical experience in:
 
 * AWS Certified Developer – Associate
 * Google Cloud Professional Cloud Architect
-* Lean Six Sigma White Belt
-* Scrum Foundation Professional Certificate
 
 ---
 
 # 📂 Repository Structure
 
-```text
+```
 devops-portfolio/
 │
 ├── projects/
-│   ├── 01-linux-fundamentals
-│   ├── 02-git-github
-│   ├── 03-shell-scripting
-│   ├── ...
-│   ├── 21-k8s-monitoring-stack
-│   ├── 22-centralized-logging
-│   ├── 23-artifact-management
-│   ├── 24-gitops-argocd
-│   ├── 25-k8s-security-trivy
-│   └── 26-k8s-backup-dr
+│   ├── Linux
+│   ├── Docker
+│   ├── Jenkins
+│   ├── Kubernetes
+│   ├── Terraform
+│   ├── AWS
+│   ├── Monitoring
+│   ├── Logging
+│   ├── GitOps
+│   ├── Security
+│   └── High Availability
 │
 └── README.md
 ```
 
+Each project contains:
+
+- 📖 Detailed README
+- 🛠️ Hands-on implementation
+- 📸 Screenshots
+- 💡 Interview Questions
+- 🐞 Troubleshooting Guide
+- 📚 Learning Outcomes
+
 ---
 
-# 📊 Portfolio Statistics
+# 🚀 Portfolio Roadmap
 
-* 26+ Hands-On DevOps Projects
-* AWS Cloud Projects
-* Kubernetes Projects
-* CI/CD Implementations
-* Infrastructure as Code Projects
-* GitOps Workflows
-* DevSecOps Implementations
-* Monitoring & Observability Solutions
-* Backup & Disaster Recovery Labs
+## ✅ Completed
+
+- Linux Fundamentals
+- Git & GitHub
+- Docker & Docker Compose
+- Jenkins CI/CD
+- Kubernetes
+- Helm
+- Amazon EKS
+- Terraform
+- AWS High Availability
+- Monitoring & Observability
+- Centralized Logging
+- GitOps
+- Kubernetes Security
+- Backup & Disaster Recovery
+- Deployment Strategies
+- Autoscaling & Resilience
+
+---
+
+## 🔄 In Progress
+
+- Terraform Modules & Reusable Infrastructure
+- Enterprise Terraform State Management
+- Production CI/CD Platform
+
+---
+
+## 🎯 Planned
+
+- Enterprise DevOps Platform (Capstone)
+- Production Incident Simulation Lab
+- DevOps Core Concepts Repository
+- Production Troubleshooting Repository
+- DevOps Interview Preparation Repository
+
+---
+
+> **This repository is continuously updated as I build new projects and strengthen my DevOps and Cloud Engineering skills.**
 
 ---
 
@@ -268,16 +340,13 @@ Currently expanding expertise in:
 
 ---
 
-# 🤝 Connect With Me
+# 📬 Connect With Me
 
-### GitHub
+**Abdul Raheman**
 
-github.com/A-Raheman
+- 💻 GitHub: https://github.com/A-Raheman
 
 ---
 
-# ⭐ Repository Goal
+⭐ If you found this repository helpful, feel free to explore the projects and share your feedback.
 
-The goal of this portfolio is to demonstrate practical DevOps, Cloud, Kubernetes, Automation, Observability, Security, and Reliability Engineering skills through hands-on implementation and real-world project simulations.
-
-If you find this repository useful, feel free to explore the projects and provide feedback.
