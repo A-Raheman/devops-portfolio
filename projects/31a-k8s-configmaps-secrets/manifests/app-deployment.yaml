@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-secret-app
+  namespace: config-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: config-secret-app
+  template:
+    metadata:
+      labels:
+        app: config-secret-app
+    spec:
+      containers:
+      - name: app
+        image: busybox
+        command: ["/bin/sh", "-c"]
+        args:
+        - |
+          while true; do
+            echo "APP_ENV=$APP_ENV";
+            echo "APP_VERSION=$APP_VERSION";
+            echo "LOG_LEVEL=$LOG_LEVEL";
+            echo "DB_USERNAME=$DB_USERNAME";
+            echo "DB_PASSWORD is loaded from Secret";
+            sleep 30;
+          done;
+        env:
+        - name: APP_ENV
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: APP_ENV
+        - name: APP_VERSION
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: APP_VERSION
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: LOG_LEVEL
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: DB_USERNAME
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: DB_PASSWORD
+
